@@ -1,0 +1,187 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{unisum}[2016/02/29 1.0]
+
+%packages to be used
+\RequirePackage[top=2.5cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry} % für weniger Rand
+\RequirePackage{german} % für die Umlaute
+\RequirePackage{amsmath}
+\RequirePackage{amssymb} % für ein paar von den Mathesymbolen
+\RequirePackage{tcolorbox} % für die Textboxen (Definitionen etc.)
+\RequirePackage{textcomp}
+\RequirePackage{array} % für Tabellen
+\RequirePackage{multirow}
+
+\RequirePackage{graphicx, wrapfig} % für Bilder
+\RequirePackage[rflt]{floatflt}
+\graphicspath{ {images/} }
+
+\RequirePackage{listings} %für Source Code
+\RequirePackage{color}
+
+
+\DeclareOption{java}{ %Eclipse-style syntax highlighting
+	\definecolor{javared}{rgb}{0.6,0,0} % for strings
+	\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+	\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+	\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+	\definecolor{javaannogrey}{rgb}{0.46,0.45,0.48} % annotations
+	\lstset{language=java,
+		aboveskip = 0em,
+		belowskip = 0em,	
+		keywordstyle=\color{javapurple}\bfseries,
+		stringstyle=\color{javared},
+		commentstyle=\color{javagreen},
+		morecomment=[s][\color{javadocblue}]{/**}{*/},
+		morecomment=[l][\color{javaannogrey}]{@},
+		tabsize=4,
+		showlines,
+		showstringspaces=false
+	}
+}
+
+
+\ProcessOptions\relax % Ende des Header
+
+
+
+
+%---------- Meta-Formattierung
+\RequirePackage{fancyhdr} % für Header und Footer
+\RequirePackage{tocloft} % Für das Inhaltsverzeichnis
+\RequirePackage{nonumonpart} % Unterdrückt auf der Seite selbst
+\RequirePackage[hidelinks]{hyperref} % Unterdrückt den hässlichen roten Ramen im Inhaltsverzeichnis
+
+% Überschriften-Formatierung
+\renewcommand{\chaptername}{} % 'Kapitel' wird nicht mitgedruckt
+\renewcommand{\thechapter}{} % Kapitelnummer wird nicht mitgedruckt
+
+% Da Kapitelnummern unterdrückt werden, müssen \section und \subsection angepasst werden
+\renewcommand{\thesection}{\arabic{section}} % Unterdrückt Kapitelnummer
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}} % Unterdrückt Kapitelnummer
+
+% Seitenzahlen von Parts (Kurs-Deckblatt) werden unterdrückt
+\addtocontents{toc}{\cftpagenumbersoff{part}} % Unterdrückt im ToC
+
+%für die erste Seite jedes Kapitels + ToC
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\rhead{\leftmark}
+	\renewcommand{\headrulewidth}{0pt}
+	\rfoot{\thepage}
+}
+\pagestyle{plain}
+
+%für alle anderen Seiten
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\leftmark}
+\renewcommand{\headrulewidth}{0pt}
+\rfoot{\thepage}
+
+
+
+
+
+%---------- Custom Listen
+\RequirePackage{enumitem}
+
+\newenvironment{myitems}
+{\begin{itemize}[topsep=3pt]
+	\setlength{\itemsep}{3pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}}
+{\end{itemize}}
+
+\newenvironment{myitemsind}
+{\begin{itemize}[topsep=0pt]
+	\setlength{\itemsep}{0pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}}
+{\end{itemize}}
+
+\newenvironment{myenums}
+{\begin{enumerate}[topsep=3pt]
+	\setlength{\itemsep}{3pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}}
+{\end{enumerate}}
+
+\newenvironment{myenumsind}
+{\begin{enumerate}[topsep=0pt]
+	\setlength{\itemsep}{0pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}}
+{\end{enumerate}}
+
+\newenvironment{myenumsero}
+{\begin{enumerate}[topsep=3pt, start=0]
+	\setlength{\itemsep}{3pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}}
+{\end{enumerate}}
+
+\newenvironment{arrowlist}
+{\begin{itemize}[topsep=0pt, label=$\rightarrow$]
+	\setlength{\itemsep}{0pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}}
+{\end{itemize}}
+
+\newenvironment{letterlist}
+{\begin{enumerate}[topsep=0pt, label=\textbf{(\alph*)}]
+	\setlength{\itemsep}{0pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}}
+{\end{enumerate}}
+
+
+
+\endinput
+
+
+
+
+
+% \noindent für paragraphen, die keinen Indent haben sollen
+
+
+
+%----------------------------------------------- Tabellen ---------------------------------------------------%
+%\bgroup
+%\def\arraystretch{1.5}
+%\begin{tabular*}{\textwidth}{m{0.25\textwidth}|m{0.70\textwidth}}
+%	A & B\\
+%	\hline C & D\\
+%\end{tabular*} 
+%\egroup
+
+%\multicolumn{3}{c||}{<Text>}  % Text über 3 Spalten; zentriert (c) gefolgt von Zwei Linien (||)
+%\multirow{7}{2.9cm}{<Text>}  % Text über 7 Zeilen, 2.9cm breit, längerer Text wird umgebrochen
+%\multirow{7}{*}{<Text>}  % Text über 7 Zeilen, Breite wie im Header, längerer Text fließt aus der Spalte raus
+
+% Text drehen
+%\parbox[c]{2mm}{<höhe>}
+% 1. Erstellt eine Parbox, in der der Text zentriert ist. Die Box ist 2mm breit und <höhe> hoch
+% höhe = \multirow{7}{*}{<text>} 
+% 2. Erstellt eine MultiRow über 7 Zeilen, die so breit ist wie der Header angibt 
+% text = \rotatebox[origin=c]{90}{<Finaler Text>}
+% 3. Der Text wird um den Mittelpunkt (c) 90 Grad gedreht
+
+
+
+%-------------------------------- Notizen zum LstListing Package --------------------------------------------%
+%\lstinputlisting{filename.java}    Importiert den Code aus einer Datei (immer die aktuellste Version)
+
+%\begin{framed}\begin{lstlisting}...\end{lstlisting}\end{framed} Für einen Rahmen um den Code
+%\begin{framed}\lstinputlisting{...}\end{framed}   Für einen Rahmen um den Code
+
+
+
+%----------------------------------------------- Bilder -----------------------------------------------------%
+%\begin{wrapfigure}{r}{0.4\textwidth}
+%	\vspace{-35pt}
+%	\begin{center}
+%		\includegraphics[width=0.4\textwidth]{BSU_speicheraufteilung}
+%	\end{center}
+%	\vspace{-10pt}
+%\end{wrapfigure}
