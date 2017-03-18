@@ -1,0 +1,24 @@
+Inside of the Cover:
+TA-W/P-I 201X-XX-XX - 201X-XX-XX
+=> TA = my initials; W/P = work or private; I = roman numerals; 20... = start and end date
+
+TOC
+Date | Subject | Project/Component | Page
+
+
+Back Cover:
+Info about the hardware and software versions; including notes on when versions were changed
+
+
+Pages are similar to the cornell-style; as in large margin for additional notes, remarks and the date
+
+Every new topic starts on a new page (right side of the notebook) and has a date in the margin
+Every new entry to a current topic has only the date and a headline without the page break
+
+
+When taking notes on a problem:
+- the "situation" of the problem: where did it occur, the context, everything leading up to it
+- what was expected to happen
+- what did actually happen
+- how was it solved, jot down quick, potentially unreadable and wrong! notes
+- a step by step walk through: what exactly triggered the error (why did it occur), how was it solved
