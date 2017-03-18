@@ -19,8 +19,9 @@ mv ./bashrc ~/.bashrc
 mv ./bash_profile ~/.bash_profile
 mv ./bash_logout ~/.bash_logout
 
-#move xbindkeys file
+#move X.Org file
 mv ./xbindkeysrc ~/.xbindkeysrc
+mv ./Xresources ~/.Xresources
 
 #move screen layout files
 mv ./xrandr.multi-screen.sh ~/.screenlayout/multi-screen.sh
