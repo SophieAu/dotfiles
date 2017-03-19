@@ -1,19 +1,14 @@
-clear Lock
-keycode 66 = Super_L
+remove Lock = Caps_Lock
+remove mod4 = Super_L
+
+! capslock is now windows:
+! escape is now capslock
+! windows is now escape
+keysym Caps_Lock = Super_L
+keysym Escape = Caps_Lock
+keysym Super_L = Escape
+
+add Lock = Caps_Lock
 add mod4 = Super_L
 
-
-! map windows (super) to capslock and capslock to windows
-! clear mod4
-! clear lock
-! add lock = Super_L Super_R Super_L
-! add mod4 = Caps_Lock
-
-! add lock = Caps_Lock
-! add mod4 = Super_L Super_R Super_L
-
-! Swap caps lock and escape
-! remove Lock = Caps_Lock
-! keysym Escape = Caps_Lock
-! keysym Caps_lock = Escape
-! add Lock = Caps_Lock
+! to reset to normal layout, use $setxkbmap -layout de
