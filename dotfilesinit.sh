@@ -22,6 +22,7 @@ mv ./bash_logout ~/.bash_logout
 #move X.Org file
 mv ./xbindkeysrc ~/.xbindkeysrc
 mv ./Xresources ~/.Xresources
+mv ./Xmodmap ~/.Xmodmap
 
 #move screen layout files
 mv ./xrandr.multi-screen.sh ~/.screenlayout/multi-screen.sh
