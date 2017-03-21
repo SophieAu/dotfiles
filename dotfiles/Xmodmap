@@ -4,9 +4,9 @@ remove mod4 = Super_L
 ! capslock is now windows:
 ! escape is now capslock
 ! windows is now escape
-keysym Caps_Lock = Super_L
-keysym Escape = Caps_Lock
-keysym Super_L = Escape
+keycode 66 = Super_L
+keycode 9 = Caps_Lock
+keycode 133 = Escape
 
 add Lock = Caps_Lock
 add mod4 = Super_L
