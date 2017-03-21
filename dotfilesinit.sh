@@ -1,30 +1,29 @@
-#TODO: don't move but instead create hardlinks
 #TODO: actually test if this script works
 
 cd ./dotfiles
 
 #move i3 files
-mv ./i3.conf ~/.config/i3/config
-mv ./i3blocks.conf ~/.config/i3/i3blocks.conf
-mv ./i3blocks.battery.py ~/.config/i3/battery.py
+ln ./i3.conf ~/.config/i3/config
+ln ./i3blocks.conf ~/.config/i3/i3blocks.conf
+ln ./i3blocks.battery.py ~/.config/i3/battery.py
 
 #move ranger file
-mv ./ranger.conf ~/.config/ranger/rc.conf
+ln ./ranger.conf ~/.config/ranger/rc.conf
 
 #move vim file
-mv ./vimrc ~/.vimrc
+ln ./vimrc ~/.vimrc
 
 #move bash files
-mv ./bashrc ~/.bashrc
-mv ./bash_profile ~/.bash_profile
-mv ./bash_logout ~/.bash_logout
+ln ./bashrc ~/.bashrc
+ln ./bash_profile ~/.bash_profile
+ln ./bash_logout ~/.bash_logout
 
 #move X.Org file
-mv ./xbindkeysrc ~/.xbindkeysrc
-mv ./Xresources ~/.Xresources
-mv ./Xmodmap ~/.Xmodmap
+ln ./xbindkeysrc ~/.xbindkeysrc
+ln ./Xresources ~/.Xresources
+ln ./Xmodmap ~/.Xmodmap
 
 #move screen layout files
-mv ./xrandr.multi-screen.sh ~/.screenlayout/multi-screen.sh
-mv ./xrandr.one-screen.sh ~/.screenlayout/one-screen.sh
+ln ./xrandr.multi-screen.sh ~/.screenlayout/multi-screen.sh
+ln ./xrandr.one-screen.sh ~/.screenlayout/one-screen.sh
 
