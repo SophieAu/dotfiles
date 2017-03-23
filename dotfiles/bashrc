@@ -7,9 +7,13 @@ fi
 
 # User specific aliases and functions
 alias vim="gvim -v"
-
 export EDITOR="gvim -v"
 export VISUAL="$EDITOR"
+
+alias syshu="systemctl poweroff"
+alias sysus="systemctl suspend"
+alias syreb="systemctl reboot"
+
 
 # coloured man pages
 # works in theory but the colours don't work
