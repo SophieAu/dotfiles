@@ -22,8 +22,5 @@ ln ./bash_logout ~/.bash_logout
 ln ./xbindkeysrc ~/.xbindkeysrc
 ln ./Xresources ~/.Xresources
 ln ./Xmodmap ~/.Xmodmap
-
-#move screen layout files
-ln ./xrandr.multi-screen.sh ~/.screenlayout/multi-screen.sh
-ln ./xrandr.one-screen.sh ~/.screenlayout/one-screen.sh
+ln ./Xmonitorsetup.sh ~/.Xmonitorsetup.sh
 
