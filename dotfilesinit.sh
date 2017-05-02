@@ -9,6 +9,7 @@ ln ./i3blocks.battery.py ~/.config/i3/battery.py
 
 #move ranger file
 ln ./ranger.conf ~/.config/ranger/rc.conf
+ln ./rifle.conf ~/.config/ranger/rifle.conf
 
 #move vim file
 ln ./vimrc ~/.vimrc
@@ -22,5 +23,6 @@ ln ./bash_logout ~/.bash_logout
 ln ./xbindkeysrc ~/.xbindkeysrc
 ln ./Xresources ~/.Xresources
 ln ./Xmodmap ~/.Xmodmap
+ln ./Xdefaults ~/.Xdefaults
 ln ./Xmonitorsetup.sh ~/.Xmonitorsetup.sh
 
