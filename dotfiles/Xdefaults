@@ -1,0 +1,5 @@
+
+!urxvt*foreground: #888888
+
+!Original font size: 10px
+urxvt*font: xft:Monospace:pixelsize=12
