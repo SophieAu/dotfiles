@@ -9,7 +9,7 @@ All my current dotfiles:
 * __bash_profile__: setting the Android Studio path and loading rvm (Ruby virtual machine)
 * __bashrc__: replacing vim with the vi-mode of gvim because of [reasons](https://sophieau.github.io/2017/03/20/how-to-get-the-system-clipboard-working-in-vim-on-fedora/), and setting aliases for system shutdown, suspend and reboot
 * __i3.conf__: my [i3-gaps](https://github.com/Airblader/i3) config
-* __i3blocks.battery.py__: a battery indicator for my status bar, stolen from [LINK](https://github.com/vivien/i3blocks-contrib/tree/master/battery)
+* __i3blocks.battery.py__: a battery indicator for my status bar, stolen from [James Murphy](https://github.com/vivien/i3blocks-contrib/tree/master/battery)
 * __i3blocks__: my i3 blocks (the status bar I'm using) config
 * __ranger.conf__: my ranger config
 * __rifle.conf__: the config for ranger's file opener
