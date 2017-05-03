@@ -1,6 +1,7 @@
 
 urxvt*background: #2f343f
 urxvt*foreground: #f3f4f5
+URxvt*scrollBar:  false
 
 !Original font size: 10px
 urxvt*font: xft:Monospace:pixelsize=12
