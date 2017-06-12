@@ -9,49 +9,49 @@ urxvt*font: xft:Monospace:pixelsize=12
 
 
 !white (ranger normal/unknown files)
-URxvt*color0:      #000000
+*color0:      #000000
 
 !dark red (ranger archives)
-URxvt*color1:      #9e1828
+*color1:      #9e1828
 
 !pale green (ranger path)
-URxvt*color2:      #aece92
+*color2:      #aece92
 
 !dark yellow (ranger img files)
-URxvt*color3:      #968a38
+*color3:      #968a38
 
 !turquiose (ranger preview comments)
-URxvt*color4:      #418179
+*color4:      #418179
 
 !dark pink (ranger video files)
-URxvt*color5:      #963c59
+*color5:      #963c59
 
 !turquoise (ranger ???)
-URxvt*color6:      #418179
+*color6:      #418179
 
 !light grey
-URxvt*color7:      #bebebe
+*color7:      #bebebe
 
 !dark grey
-URxvt*color8:      #666666
+*color8:      #666666
 
 !bright pink
-URxvt*color9:      #cf6171
+*color9:      #cf6171
 
 !light green
-URxvt*color10:     #c5f779
+*color10:     #c5f779
 
 !pale yellow
-URxvt*color11:     #fff796
+*color11:     #fff796
 
 !blue (ranger folder)
-URxvt*color12:     #4186be
+*color12:     #4186be
 
 !pale dirty pink
-URxvt*color13:     #cf9ebe
+*color13:     #cf9ebe
 
 !turquoise
-URxvt*color14:     #71bebe
+*color14:     #71bebe
 
 !black
-URxvt*color15:     #ffffff
+*color15:     #ffffff
