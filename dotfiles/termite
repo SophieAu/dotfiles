@@ -1,0 +1,58 @@
+[options]
+
+font = Hack 12px
+# font = Fira Mono for Powerline 12px
+
+
+
+[colors]
+foreground = #f3f4f5
+background = #2f343f
+
+#white (ranger normal/unknown files)
+color0 = #000000
+
+#dark red (ranger archives)
+color1 =  #9e1828
+
+#pale green (ranger path)
+color2 = #aece92
+
+#dark yellow (ranger img files)
+color3 = #968a38
+
+#turquiose (ranger preview comments)
+color4 = #418179
+
+#dark pink (ranger video files)
+color5 = #963c59
+
+#turquoise (ranger ???)
+color6 =      #418179
+
+#light grey
+color7 =     #bebebe
+
+#dark grey
+color8 =     #666666
+
+#bright pink
+color9 =     #cf6171
+
+#light green
+color10 =     #c5f779
+
+#pale yellow
+color11 =    #fff796
+
+#blue (ranger folder)
+color12 =    #4186be
+
+#pale dirty pink
+color13 =    #cf9ebe
+
+#turquoise
+color14 =    #71bebe
+
+#black
+color15 =    #ffffff
