@@ -18,11 +18,11 @@ All my current dotfiles:
 
  
 ## dotfiles archive
-Dotfiles for programs I used in the past. Currently it only contains my old [AutoHotKey](https://www.autohotkey.com/) script from my Windows days.
+Dotfiles for programs I used in the past. Currently it only contains an old [AutoHotKey](https://www.autohotkey.com/) script from my Windows days.
 
 
 ## Templates
-Both templates and stlyes used by programs (e.g. [LaTeX](https://www.latex-project.org/)) and for myself.
+Both templates and styles used by programs (e.g. [LaTeX](https://www.latex-project.org/)) and for myself.
 
 * __Lab Notes.txt__: Before I found [Boostnote](https://boostnote.io/) I took notes on my coding exploits on paper. This was how they were supposed to be organized
 * __unisum.sty__: The LaTeX style for my uni course summaries
