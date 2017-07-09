@@ -15,6 +15,13 @@ alias sysus="systemctl suspend"
 alias syreb="systemctl reboot"
 
 
+# Turn on Powerline
+powerline-daemon -q
+. /usr/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+
+
+
+
 # coloured man pages
 # works in theory but the colours don't work
 # man() {
