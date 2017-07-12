@@ -14,3 +14,9 @@
 :nnoremap <F6> "=strftime("%T")<CR>P
 :inoremap <F6> <C-R>=strftime("%T")<CR>
 
+
+
+"show powerline when multiple windows are open
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
