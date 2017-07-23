@@ -1,0 +1,73 @@
+! if I want to seperate out the code
+! #include "~/.xres/urxvt"
+
+#define bgcolour  #2f343f
+#define fgcolour  #f3f4f5
+
+rofi*bg: bgcolour
+rofi*fg: fgcolour
+
+rofi.color-window: bgcolour, fgcolour
+rofi.color-normal: bgcolour, fgcolour, bgcolour, fgcolour, bgcolour
+rofi.color-urgent: bgcolour, fgcolour, bgcolour, fgcolour, bgcolour
+rofi.color-active: bgcolour, fgcolour, bgcolour, fgcolour, bgcolour
+rofi.separator-style: solid
+
+
+
+urxvt*background: #2f343f
+urxvt*foreground: #f3f4f5
+URxvt*scrollBar:  false
+
+!Original font size: 10px
+urxvt*font: xft:Monospace:pixelsize=12
+
+
+
+!white (ranger normal/unknown files)
+*color0:      #000000
+
+!dark red (ranger archives)
+*color1:      #9e1828
+
+!pale green (ranger path)
+*color2:      #aece92
+
+!dark yellow (ranger img files)
+*color3:      #968a38
+
+!turquiose (ranger preview comments)
+*color4:      #418179
+
+!dark pink (ranger video files)
+*color5:      #963c59
+
+!turquoise (ranger ???)
+*color6:      #418179
+
+!light grey
+*color7:      #bebebe
+
+!dark grey
+*color8:      #666666
+
+!bright pink
+*color9:      #cf6171
+
+!light green
+*color10:     #c5f779
+
+!pale yellow
+*color11:     #fff796
+
+!blue (ranger folder)
+*color12:     #4186be
+
+!pale dirty pink
+*color13:     #cf9ebe
+
+!turquoise
+*color14:     #71bebe
+
+!black
+*color15:     #ffffff
