@@ -11,7 +11,7 @@ export EDITOR="gvim -v"
 export VISUAL="$EDITOR"
 
 alias syshu="systemctl poweroff"
-alias sysus="systemctl suspend"
+alias sysus="systemctl suspend & exit"
 alias syreb="systemctl reboot"
 
 
