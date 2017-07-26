@@ -16,7 +16,7 @@ alias syreb="systemctl reboot"
 
 alias ls="ls --color=auto -N"
 
-# to get the "standard" promtp back, simply comment out the line below
+# to get the "standard" prompt back, simply comment out the line below
 PS1="\e[1;15m\w \e[1;91m>  \e[0m"
 
 # Turn on Powerline
