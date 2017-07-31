@@ -20,9 +20,18 @@ ln ./bash_profile ~/.bash_profile
 ln ./bash_logout ~/.bash_logout
 
 #move X.Org file
-ln ./xbindkeysrc ~/.xbindkeysrc
-ln ./Xresources ~/.Xresources
-ln ./Xmodmap ~/.Xmodmap
-ln ./Xdefaults ~/.Xdefaults
+ln ./xbindkeys.conf ~/.xbindkeysrc
+ln ./Xresources.conf ~/.Xresources
+ln ./Xmodmap.conf ~/.Xmodmap
+ln ./Xdefaults.conf ~/.Xdefaults
 ln ./Xmonitorsetup.sh ~/.Xmonitorsetup.sh
+
+#move GTK file
+ln ./gtk.css ~/.config/gtk-3.0/gtk.css
+
+#move rofi file
+ln ./rofi.conf ~/.config/rofi/config
+
+#move termite file
+ln ./termite.conf ~/.config/termite/config
 
