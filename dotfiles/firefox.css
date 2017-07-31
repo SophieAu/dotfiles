@@ -56,7 +56,6 @@
 .tabbrowser-tab .tab-text {
 	font-family: var(--glob-fonts) !important;
 	font-size: var(--glob-font-size) !important;
-	color: red;
 }
 
 
