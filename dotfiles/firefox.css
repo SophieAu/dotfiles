@@ -1,0 +1,72 @@
+@namespace html url(http://www.w3.org/1999/xhtml);
+@namespace xul url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
+
+/*
+ * . for class
+ * # for id
+ */
+
+
+
+:root{
+/* Font Stuff */
+--glob-fonts: monospace;
+--glob-font-size : 8pt;
+
+--glob-font-color: #f3f4f5;
+--glob-inactive-font-color: #676e7d;
+
+
+/* various colours */
+--glob-bg-color: #2f343f;
+}
+
+
+/*AUTOCOMPLETE*/
+
+.autocomplete-richlistitem {
+	font-family: var(--glob-fonts) !important;
+	font-size: var(--glob-font-size) !important;
+	padding-left: 4pt;
+	height: 25pt;
+	min-height: 25pt;
+}
+
+.ac-type-icon {
+	display: none !important;
+}
+
+
+/* WHOLE UPPER THING IN GENERAL */
+#navigator-toolbox {
+	background: var(--glob-bg-color) !important;
+	font-family: var(--glob-fonts) !important;
+	font-size: vat(--glob-font-size) !important;
+}
+
+
+/* URL BAR */
+#urlbar {
+	font-family: var(--glob-fonts) !important;
+	font-size: var(--glob-font-size) !important;
+	background: var(--glob-bg-color) !important;
+}
+
+/* TAB BAR */
+.tabbrowser-tab .tab-text {
+	font-family: var(--glob-fonts) !important;
+	font-size: var(--glob-font-size) !important;
+	color: red;
+}
+
+
+
+
+
+
+/* MAKE SO MUCH STUFF INVISIBLE */
+
+#urlbar-reload-button, #urlbar-stop-button, #urlbar-go-button, #bookmarks-menu-button, #downloads-button, #home-button, #stylish-toolbar-button, #abp-toolbarbutton, #notification-popup-box, #new-tab-button, #private-browsing-indicator, #search-container, #nav-bar-overflow-button, .tabs-newtab-button, .tab-throbber, #pocket-button, #loop-button, #social-share-button, #window-controls {
+	display: none !important;
+}
+
