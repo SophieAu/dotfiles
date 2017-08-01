@@ -45,14 +45,16 @@
 }
 
 
-/* URL BAR */
+
+/* ------------------------------------- URL BAR --------------------------------------*/
 #urlbar {
 	font-family: var(--glob-fonts) !important;
 	font-size: var(--glob-font-size) !important;
 	background: var(--glob-bg-color) !important;
 }
 
-/* TAB BAR */
+
+/* ------------------------------------ TAB BAR -----------------------------------------*/
 .tabbrowser-tab .tab-text {
 	font-family: var(--glob-fonts) !important;
 	font-size: var(--glob-font-size) !important;
