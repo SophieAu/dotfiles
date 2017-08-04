@@ -62,6 +62,12 @@
 #PanelUI-menu-button {
 	padding-inlne: 0px;
 }
+/* ----------------------- DOWNLOAD PAGE (about:downloads) --------------------------*/
+.downloadDetailsNormal, .downloadDetailsHover, .downloadOpenFile, .downloadShowMoreInfo, .downloadButtonLabels {
+	display: none !important;
+}
+
+
 /* ------------------------------------ TAB BAR -----------------------------------------*/
 .tabbrowser-tab .tab-text {
 	font-family: var(--glob-fonts) !important;
