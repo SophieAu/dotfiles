@@ -87,7 +87,7 @@
 
 /* MAKE SO MUCH STUFF INVISIBLE */
 
-#urlbar-reload-button, #urlbar-stop-button, #urlbar-go-button, #bookmarks-menu-button, #downloads-button, #home-button, #stylish-toolbar-button, #abp-toolbarbutton, #notification-popup-box, #new-tab-button, #private-browsing-indicator, #search-container, #nav-bar-overflow-button, .tabs-newtab-button, .tab-throbber, #pocket-button, #loop-button, #social-share-button, #window-controls {
+#urlbar-reload-button, #urlbar-stop-button, #urlbar-go-button, #bookmarks-menu-button, #downloads-button, #home-button, #stylish-toolbar-button, #abp-toolbarbutton, #notification-popup-box, #new-tab-button, #private-browsing-indicator, #search-container, #nav-bar-overflow-button, .tabs-newtab-button, .tab-throbber, #pocket-button, #loop-button, #social-share-button, #window-controls, #PanelUI-footer-fxa, #PanelUI-fxa-status {
 	display: none !important;
 }
 
