@@ -53,6 +53,11 @@
 	background: var(--glob-bg-color) !important;
 }
 
+#identity-box {
+	border-inline-end-width: 0px !important;
+}
+
+
 #PanelUI-button {
 	border-image: none !important;
 	margin-inline-start: 0px !important;
