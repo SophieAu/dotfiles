@@ -68,6 +68,12 @@
 #PanelUI-menu-button {
 	padding-inlne: 0px;
 }
+
+#PanelUI-contents {
+	font-family: var(--glob-fonts) !important;
+	font-size: var(--glob-fonts) !important;
+}
+
 /* ----------------------- DOWNLOAD PAGE (about:downloads) --------------------------*/
 .downloadDetailsNormal, .downloadDetailsHover, .downloadOpenFile, .downloadShowMoreInfo, .downloadButtonLabels {
 	display: none !important;
