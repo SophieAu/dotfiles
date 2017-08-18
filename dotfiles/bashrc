@@ -16,6 +16,10 @@ alias syreb="systemctl reboot"
 
 alias ls="ls --color=auto -N"
 
+alias dnupgr="sudo dnf upgrade"
+
+
+
 # to get the "standard" prompt back, simply comment out the line below
 PS1="\e[1;15m\w \e[1;91m>  \e[0m"
 
