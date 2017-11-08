@@ -1,0 +1,30 @@
+#!/bin/bash
+
+#extracts an archive whatever its extension (well, it can do tar, rar and zip)
+
+archive=$1
+case "$archive" in
+ *.tar.bz2)
+    echo "Extracting tar..."
+    tar -xjvf "$archive";;
+ *.tar.gz)
+    echo "Extracting tar..."
+    tar -xzvf "$archive";;
+ *.rar)
+    echo "Extracting rar..."
+    unrar e "$archive";;
+ *.zip)
+    echo "Extracting zip..."
+    unzip "$archive";;
+esac 
+
+exit
+
+
+# omitted code, kept because it's a nice way to extract the basename and extension
+extension=${archive##*.}
+basename=${archive%.*}
+
+echo "$extension"
+echo "$basename"
+
