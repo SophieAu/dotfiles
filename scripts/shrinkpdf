@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# potentially shrink all pdfs that are passed as arguments
+# actual shrinking is not guaranteed as the input files might already be fairly small
+
+for file in "$@"
+do
+ echo "$file"
+
+ # rename the old file to make it clear which is the optimized one
+ oldfile="${file%.*} (old).pdf"
+ mv "$file" "$oldfile"
+
+ # optimize the file
+ gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dPDFSETTINGS=/prepress -sOutputFile="$file" "$oldfile"
+done
+
+exit
+
