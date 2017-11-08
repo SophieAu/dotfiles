@@ -1,0 +1,120 @@
+\documentclass[a4paper]{report}
+
+\usepackage[top=2.5cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry} % to set the page borders
+\usepackage[utf8]{inputenc} % to display uncode (like umlauts) properly
+
+
+\usepckage[ngerman]{babel}    % for german special chars
+
+\usepackage{amsmath, amssymb} % for maths symbols
+
+\usepackage{tcolorbox}        % for text boxes (like math definitions)
+
+\usepackage{array, multirow}  % for tables
+
+\RequirePackage{graphicx, wrapfig, float} % for images
+\graphicspath{ {images/} } % sets the path to the folder containing all images
+
+\RequirePackage{listings, xcolor} % for source code
+
+\RequirePackage{fancyhdr} % for header und footer
+\RequirePackage{tocloft} % to print the table of contents
+\RequirePackage[hidelinks]{hyperref} % allow hyperlinks and supress the red border
+
+
+
+
+
+% PHP Syntax Highlighting
+\definecolor{dkgreen}{rgb}{0,.6,0}
+\definecolor{dkblue}{rgb}{0,0,.6}
+\definecolor{dkyellow}{cmyk}{0,0,.8,.3}
+
+\lstset{language    = php,
+	basicstyle      = \small\ttfamily,
+	keywordstyle    = \color{dkblue},
+	stringstyle     = \color{red},
+	identifierstyle = \color{dkgreen},
+	commentstyle    = \color{gray},
+	emph            =[1]{php},
+	emphstyle       =[1]\color{black},
+	emph            =[2]{if,and,or,else},
+	emphstyle       =[2]\color{dkyellow},
+	frame           = single,
+	showstringspaces= false,
+	tabsize         = 2
+}
+
+ 
+% Java Syntax Highlighting
+\definecolor{javared}{rgb}{0.6,0,0} % for strings
+\definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
+\definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
+\definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+\definecolor{javaannogrey}{rgb}{0.46,0.45,0.48} % annotations
+\lstset{language = java,
+	aboveskip    = 0em,
+	belowskip    = 0em,	
+	keywordstyle = \color{javapurple}\bfseries,
+	stringstyle  = \color{javared},
+	commentstyle = \color{javagreen},
+	morecomment  =[s][\color{javadocblue}]{/**}{*/},
+	morecomment  =[l][\color{javaannogrey}]{@},
+	tabsize      = 4,
+	showlines,
+	showstringspaces=false
+}
+
+
+%---------- Custom Lists
+\RequirePackage{enumitem}
+
+\newenvironment{myitems}
+{\begin{itemize}[topsep=3pt]
+	\setlength{\itemsep}{3pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}}
+{\end{itemize}}
+
+\newenvironment{myitemsind}
+{\begin{itemize}[topsep=0pt]
+	\setlength{\itemsep}{0pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}}
+{\end{itemize}}
+
+\newenvironment{myenums}
+{\begin{enumerate}[topsep=3pt]
+	\setlength{\itemsep}{3pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}}
+{\end{enumerate}}
+
+\newenvironment{myenumsind}
+{\begin{enumerate}[topsep=0pt]
+	\setlength{\itemsep}{0pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}}
+{\end{enumerate}}
+
+\newenvironment{myenumsero}
+{\begin{enumerate}[topsep=3pt, start=0]
+	\setlength{\itemsep}{3pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}}
+{\end{enumerate}}
+
+\newenvironment{arrowlist}
+{\begin{itemize}[topsep=0pt, label=$\rightarrow$]
+	\setlength{\itemsep}{0pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}}
+{\end{itemize}}
+
+\newenvironment{letterlist}
+{\begin{enumerate}[topsep=0pt, label=\textbf{(\alph*)}]
+	\setlength{\itemsep}{0pt}
+	\setlength{\parskip}{0pt}
+	\setlength{\parsep}{0pt}}
+{\end{enumerate}}
+
