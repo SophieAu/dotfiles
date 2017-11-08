@@ -2,7 +2,7 @@
 - [ ] create a README file from the template and fill out **everything**
 - [ ] draft the website
 - [ ] add a ``.gitignore``
-- [ ] clean up issues and milestones accoring to the file
+- [ ] clean up issues and milestones according to the file
 - [ ] follow my branching model
 - [ ] set up CI and all the other buttons
 - [ ] create a board on Zube
