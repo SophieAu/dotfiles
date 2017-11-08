@@ -1,0 +1,61 @@
+% listing (code) template
+\begin{lstlisting}[caption={}, label={action}, language=]
+\end{lstlisting}
+
+% import source code from a file
+\lstinputlisting{filename.java}[caption={}, label{action}, language=]
+
+% to get a frame around the source code
+\begin{framed}...\end{framed}
+
+
+
+% figure (image) template (centered image, at the position that's specified in the .tex document ([H]))
+\begin{figure}[H]
+\begin{center}
+	\includegraphics[width=\textwidth]{filename}
+	\caption{}
+	\label{}
+\end{center}
+\end{figure}
+
+% right-aligned image with text wrapping around it
+\begin{wrapfigure}{r}{0.4\textwidth} % float-side, width of float box
+	\vspace{-35pt} % padding at the top
+	\begin{center}
+		\includegraphics[width=\textwidth]{filename}
+	\end{center}
+	\vspace{-10pt} % padding at the bottom
+\end{wrapfigure}
+
+
+
+%referencing a label:
+\ref{}
+
+%referencing a bibtex item:
+\cite{}
+
+
+
+% tables
+\bgroup
+\def\arraystretch{1.5}
+\begin{tabular*}{\textwidth}{m{0.25\textwidth}|m{0.70\textwidth}}
+	A & B\\
+	\hline C & D\\
+\end{tabular*} 
+\egroup
+
+\multicolumn{3}{c||}{<Text>}  % Text über 3 Spalten; zentriert (c) gefolgt von Zwei Linien (||)
+\multirow{7}{2.9cm}{<Text>}  % Text über 7 Zeilen, 2.9cm breit, längerer Text wird umgebrochen
+\multirow{7}{*}{<Text>}  % Text über 7 Zeilen, Breite wie im Header, längerer Text fließt aus der Spalte raus
+
+% Text drehen
+\parbox[c]{2mm}{<höhe>}
+% 1. Erstellt eine Parbox, in der der Text zentriert ist. Die Box ist 2mm breit und <höhe> hoch
+ höhe = \multirow{7}{*}{<text>} 
+% 2. Erstellt eine MultiRow über 7 Zeilen, die so breit ist wie der Header angibt 
+ text = \rotatebox[origin=c]{90}{<Finaler Text>}
+% 3. Der Text wird um den Mittelpunkt (c) 90 Grad gedreht
+
