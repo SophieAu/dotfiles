@@ -1,0 +1,63 @@
+#!/bin/bash
+
+# renames all file after the same pattern like so:
+# batchrename <targetbasename> <files>
+# with default numbering being " (X)" 
+
+numberpattern='(%d)'
+
+# check if the "open" numbering is requested (00X)
+while getopts "o" flag; do
+ case $flag in
+  o) numberpattern='%03d' ;;
+esac
+done
+
+# if the file has an extension, it is extracted along with the dot
+function get_extension {
+ # file has no extension
+ if [[ "$1" != *.* ]]; then
+  echo ""
+  return
+ fi
+
+ ext="${1##*.}"
+ if [ "$ext" == "JPG" ]; then
+  ext="jpg"
+ fi
+
+ echo ".$ext"
+}
+
+
+targetbasename="$1"
+shift
+counter=1;
+
+# warning about which files are renamed
+echo "You are about to rename the following files:"
+for file in "$@" ; do
+ echo "$file"
+done
+while true; do
+ read -p "Are you sure? [y/N] " yn
+ case $yn in
+  [Yy] ) echo "Renaming..."; break;;
+  [Nn] ) echo "Exiting...";  exit;;
+ esac
+done
+
+# actual renaming
+for file in "$@" ; do
+ extension=$(get_extension "$file")
+ # shellcheck disable=SC2059
+ number=$(printf "$numberpattern" $counter)
+ newfilename="${targetbasename} ${number}${extension}"
+
+ echo "$file -> $newfilename"
+ mv -i "${file}" "${newfilename}"
+ ((counter++));
+done
+
+exit
+
