@@ -1,0 +1,10 @@
+#!/bin/bash
+
+allTheDrives=$(find /media/ -mindepth 1 -maxdepth 1 -printf '%f')
+for drive in "$allTheDrives" ; do
+ echo "unmounting $drive"
+ pumount /media/$drive
+done
+
+systemctl suspend
+
