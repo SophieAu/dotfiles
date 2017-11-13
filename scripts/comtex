@@ -1,0 +1,16 @@
+#!/bin/bash
+
+file=$1
+baseName=${file%.tex}
+
+# compile .tex file to pdf (-d)
+rubber -d $file
+
+# remove all the meta files
+rm -f $baseName.aux
+rm -f $baseName.log
+rm -f $baseName.dvi
+rm -f $baseName.lof
+rm -f $baseName.lot
+rm -f $baseName.toc
+
