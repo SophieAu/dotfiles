@@ -23,10 +23,6 @@ alias ffs='echo sudo $(history -p !!) && sudo $(history -p !!)'
 # to get the "standard" prompt back, simply comment out the line below
 PS1="\e[1;15m\w \e[1;91m>>  \e[0m"
 
-# Turn on Powerline
-# powerline-daemon -q
-# . /usr/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
