@@ -13,7 +13,7 @@ export VISUAL="$EDITOR"
 alias syshu="systemctl poweroff"
 alias syreb="systemctl reboot"
 
-alias ls="ls --color=auto -N"
+alias lsc="ls --color=auto -N"
 
 alias dnupgr="sudo dnf upgrade"
 
