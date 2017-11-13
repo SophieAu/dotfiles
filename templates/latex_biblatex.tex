@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+ 
+\usepackage[
+	backend=biber, % the standard database backend, can be omitted
+	style=, % the bibliography style (how the reference looks next to the entry in the bibliography
+			% e.g. numeric -> [1], alphabetic -> [NamYY]
+	citestyle=, % how the citation looks in the textbody. If this is omitted LaTeX uses the style entry instead
+	sorting= % how the entries in the bibliography are supposed to be ordered. If this is omitted, entries are not sorted.
+]{biblatex}
+\addbibresource{sample.bib}
+ 
+\begin{document}
+Let's cite! The Einstein's journal paper \cite{einstein} and the Dirac's 
+book \cite{dirac} are physics related items. 
+ 
+\printbibliography
+ 
+\end{document}
+
+% Personal favourite options:
+\usepackage[style=numeric,sorting=nyt]{biblatex}
+
+
+
+%Per default, \printbibliography gives the bibliography the title "References", you can change it though
+\printbibliography[title={Custom Header}]
+
+% you can even only print entries that match a certain keyword in their keywords field
+\printbibliography[keyword=boring,title={Only Boring Papers}]
+% or only entries of a certain type
+\printbibliography[type=article,title={Articles only}]
+
+% To add the bibliography to the TOC, add the following option:
+\printbibliography[heading=bibintoc] % Adds as an unnumbered chapter/section (if no chapters allowed)
+\printbibliography[heading=subbibintoc] % Adds as an unnumbered section/subsection (depending on bibintoc level)
+
+
+
+% BIB FILE ENTRIES
+% There are multiple types for entries but the basic structure is the same for everything:
+@type{label,
+	author = {Author},
+	title = {Title},
+	...
+}
+
+% here are some examples:
+@article{einstein,
+    author =       "Albert Einstein",
+    title =        "{Zur Elektrodynamik bewegter K{\"o}rper}. ({German})
+    [{On} the electrodynamics of moving bodies]",
+    journal =      "Annalen der Physik",
+    volume =       "322",
+    number =       "10",
+    pages =        "891--921",
+    year =         "1905",
+    DOI =          "http://dx.doi.org/10.1002/andp.19053221004",
+    keywords =     "physics"
+}
+ 
+@book{dirac,
+    title={The Principles of Quantum Mechanics},
+    author={Paul Adrien Maurice Dirac},
+    isbn={9780198520115},
+    series={International series of monographs on physics},
+    year={1981},
+    publisher={Clarendon Press},
+    keywords = {physics}
+}
+ 
+@online{knuthwebsite,
+    author    = "Donald Knuth",
+    title     = "Knuth: Computers and Typesetting",
+    url       = "http://www-cs-faculty.stanford.edu/~uno/abcde.html",
+    keywords  = "latex,knuth"
+}
+ 
+@inbook{knuth-fa,
+    author = "Donald E. Knuth",
+    title = "Fundamental Algorithms",
+    publisher = "Addison-Wesley",
+    year = "1973",
+    chapter = "1.2",
+    keywords  = "knuth,programming"
+}
+
