@@ -26,4 +26,5 @@ PS1="\e[1;15m\w \e[1;91m>>  \e[0m"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-eval "$(thefuck --alias)"
+eval $(thefuck --alias)
+
