@@ -1,9 +1,12 @@
 % listing (code) template
-\begin{lstlisting}[caption={}, label={action}, language=]
+\begin{lstlisting}[caption={}, label={}, language=]
 \end{lstlisting}
 
+% if there are weird symbols instead of spaces, add this to the square brackets of the listing declaration
+showstringspaces=false
+
 % import source code from a file
-\lstinputlisting{filename.java}[caption={}, label{action}, language=]
+\lstinputlisting{filename.java}[caption={}, label{}, language=]
 
 % to get a frame around the source code
 \begin{framed}...\end{framed}
@@ -40,12 +43,20 @@
 
 % tables
 \bgroup
-\def\arraystretch{1.5}
-\begin{tabular*}{\textwidth}{m{0.25\textwidth}|m{0.70\textwidth}}
+\def\arraystretch{1.5} % defines the space between rows (1.0 is default value but 1.5 is nice)
+\setlength{\tabcolsep}{6pt} % defines the space between columns (6pt is default value}
+\begin{tabular*}{\textwidth}{m{0.25\textwidth} | m{0.70\textwidth}}
 	A & B\\
 	\hline C & D\\
 \end{tabular*} 
 \egroup
+
+% to get linebreaks in the cells:
+p{<width>}
+
+% to declare multiple columsn with the same format and width:
+*{<number>}{<type}
+
 
 \multicolumn{3}{c||}{<Text>}  % Text über 3 Spalten; zentriert (c) gefolgt von Zwei Linien (||)
 \multirow{7}{2.9cm}{<Text>}  % Text über 7 Zeilen, 2.9cm breit, längerer Text wird umgebrochen
