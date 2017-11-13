@@ -27,36 +27,6 @@ PS1="\e[1;15m\w \e[1;91m>>  \e[0m"
 # powerline-daemon -q
 # . /usr/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 
-
-
-
-# coloured man pages
-# works in theory but the colours don't work
-# man() {
-# 	if [ "$TERM" = 'linux' ]; then
-# 		env \
-# 			LESS_TERMCAP_mb=$(printf "\e[34m") \
-# 			LESS_TERMCAP_md=$(printf "\e[1;31m") \
-# 			LESS_TERMCAP_me=$(printf "\e[0m") \
-# 			LESS_TERMCAP_se=$(printf "\e[0m") \
-# 			LESS_TERMCAP_so=$(printf "\e[30;43m") \
-# 			LESS_TERMCAP_ue=$(printf "\e[0m") \
-# 			LESS_TERMCAP_us=$(printf "\e[32m") \
-# 					/usr/bin/man "$@"
-# 	else
-# 		env \
-# 			LESS_TERMCAP_mb=$(printf "\e[1;34m") \
-# 			LESS_TERMCAP_md=$(printf "\e[38;5;9m") \
-# 			LESS_TERMCAP_me=$(printf "\e[0m") \
-# 			LESS_TERMCAP_se=$(printf "\e[0m") \
-# 			LESS_TERMCAP_so=$(printf "\e[30;43m") \
-# 			LESS_TERMCAP_ue=$(printf "\e[0m") \
-# 			LESS_TERMCAP_us=$(printf "\e[38;5;10m") \
-# 					/usr/bin/man "$@"
-# 	fi
-# }
-
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
