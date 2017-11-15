@@ -28,3 +28,5 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 eval $(thefuck --alias)
 
+# don't save duplicates in bash history, delete duplicates except newest
+export HISTCONTROL=ignoreboth:erasedups
