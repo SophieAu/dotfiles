@@ -1,0 +1,93 @@
+#!/bin/bash
+# shellcheck disable=SC2162
+
+# checking for Inbox Zero
+
+#function doItNow
+#function areTheySupposedToBeThere
+
+# 0.Inbox
+inboxFiles=$(find ~/0.Inbox/ -not \( -path '*/.*' -o -path '*/' \) | wc -l)
+if [[ ! $inboxFiles == 0 ]] ; then
+ echo "There are $inboxFiles files in 0.Inbox:"
+ find ~/0.Inbox/ -not \( -path '*/.*' -o -path '*/' \) -printf '%P\n'
+ echo
+fi
+while true; do
+ read -p "Are they supposed to be there? [y/N] " yn
+ case $yn in
+  [Yy] ) break;;
+  [Nn] ) echo "You better clean them out then."; echo;;
+ esac
+done
+echo
+
+# Camera Uploads
+cameraUploads=$(find ~/Camera\ Uploads/ -not \( -path '*/.*' -o -path '*/' \) | wc -l)
+if [[ ! $cameraUploads == 0 ]] ; then
+ echo "There are unsorted photos in Camera Uploads."
+fi
+while true; do
+ read -p "Are they supposed to be there? [y/N] " yn
+ case $yn in
+  [Yy] ) break;;
+  [Nn] ) echo "You better clean them out then."; echo;;
+ esac
+done
+echo
+
+# Firefox Bookmarks
+while true; do
+ read -p "Did you clean up the Firefox Bookmarks? [y/N] " yn
+ case $yn in
+  [Yy] ) break;;
+  [Nn] ) echo "You better do it now then."; echo;;
+ esac
+done
+echo
+
+# Home Folder
+while true; do
+ read -p "Did you clean up your home folder? [y/N] " yn
+ case $yn in
+  [Yy] ) break;;
+  [Nn] ) echo "You better do it now then."; echo;;
+ esac
+done
+echo
+ 
+
+# Backing up
+#echo "Backing up Files"
+#pmount /dev/sdb1
+#cd /dev/sdb1
+
+#homeFolderFiles=ls ~/
+
+#cp -r -u /dev/sdb1/0.Backup/ $homeFolderFiles
+#pumount /dev/sdb1
+echo
+
+
+# Cleaning up Temp Files
+rm -rf ~/.cache/thumbnails/*
+
+# Running upgrade
+echo "Updating System"
+sudo dnf upgrade
+echo
+
+# decide between poweroff and shutdown
+while true; do
+ read -p "Do you want to suspend or shutdown the system? [sus/shu] " ans
+ case $ans in
+  sus) echo "suspending..."; sysus;;
+  shu) echo "shutting down..."; echo "shu";;
+ esac
+done
+
+exit
+
+# systemctl suspend
+# systemctl poweroff
+
