@@ -16,10 +16,10 @@ function supposedToBe() {
 }
 
 # 0.Inbox
-inboxFiles=$(find ~/0.Inbox/ -not \( -path '*/.*' -o -path '*/' \) | wc -l)
-if [[ ! $inboxFiles == 0 ]] ; then
- echo "There are $inboxFiles files in 0.Inbox:"
- find ~/0.Inbox/ -not \( -path '*/.*' -o -path '*/' \) -printf '%P\n'
+inboxFiles=$(find ~/0.Inbox/ -not \( -path '*/.*' -o -path '*/' \) -printf ' * %P\n')
+fileCount=$(echo "$inboxFiles" | wc -l)
+if [[ $fileCount != 0 ]] ; then
+  echo -e "There are $fileCount files in 0.Inbox:\n$inboxFiles"
   supposedToBe "Are they supposed to be there?"
 fi
 
