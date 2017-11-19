@@ -4,57 +4,37 @@
 # checking for Inbox Zero
 
 #function doItNow
-#function areTheySupposedToBeThere
+function supposedToBe() {
+  while true; do
+    read -p "$1 [y/N] " yn
+    case $yn in
+      [Yy] ) echo; break;;
+      [Nn] ) echo "You better clean ${2-them} out then."; echo;;
+    esac
+  done
+  return 0
+}
 
 # 0.Inbox
 inboxFiles=$(find ~/0.Inbox/ -not \( -path '*/.*' -o -path '*/' \) | wc -l)
 if [[ ! $inboxFiles == 0 ]] ; then
  echo "There are $inboxFiles files in 0.Inbox:"
  find ~/0.Inbox/ -not \( -path '*/.*' -o -path '*/' \) -printf '%P\n'
- echo
+  supposedToBe "Are they supposed to be there?"
 fi
-while true; do
- read -p "Are they supposed to be there? [y/N] " yn
- case $yn in
-  [Yy] ) break;;
-  [Nn] ) echo "You better clean them out then."; echo;;
- esac
-done
-echo
 
 # Camera Uploads
 cameraUploads=$(find ~/Camera\ Uploads/ -not \( -path '*/.*' -o -path '*/' \) | wc -l)
 if [[ ! $cameraUploads == 0 ]] ; then
  echo "There are unsorted photos in Camera Uploads."
+  supposedToBe "Are they supposed to be there?"
 fi
-while true; do
- read -p "Are they supposed to be there? [y/N] " yn
- case $yn in
-  [Yy] ) break;;
-  [Nn] ) echo "You better clean them out then."; echo;;
- esac
-done
-echo
 
 # Firefox Bookmarks
-while true; do
- read -p "Did you clean up the Firefox Bookmarks? [y/N] " yn
- case $yn in
-  [Yy] ) break;;
-  [Nn] ) echo "You better do it now then."; echo;;
- esac
-done
-echo
+supposedToBe "Did you clean up the Firefox Bookmarks?"
 
 # Home Folder
-while true; do
- read -p "Did you clean up your home folder? [y/N] " yn
- case $yn in
-  [Yy] ) break;;
-  [Nn] ) echo "You better do it now then."; echo;;
- esac
-done
-echo
+supposedToBe "Did you clean up your home directory?" "it"
  
 
 # Backing up
