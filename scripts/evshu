@@ -5,13 +5,16 @@
 
 #function doItNow
 function supposedToBe() {
+  read -p "$1 [y/N] " yn
   while true; do
-    read -p "$1 [y/N] " yn
     case $yn in
-      [Yy] ) echo; break;;
-      [Nn] ) echo "You better clean ${2-them} out then."; echo;;
+      [Yy]) break;;
+      [Nn])
+		echo "You better clean ${2-them} out then."
+  		read -p "Done? [y/N] " yn;;
     esac
   done
+  echo
   return 0
 }
 
