@@ -10,7 +10,7 @@ rubber -d $file
 rm -f $baseName.aux
 rm -f $baseName.log
 rm -f $baseName.dvi
-rm -f $baseName.lof
+rm -f $baseName.log
 rm -f $baseName.lot
 rm -f $baseName.toc
 
