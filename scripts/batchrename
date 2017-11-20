@@ -2,8 +2,9 @@
 
 # renames all file after the same pattern like so:
 # batchrename <targetbasename> <files>
-# with default numbering being " (X)" 
 
+
+# default numbering: " (X)" 
 numberpattern='(%d)'
 
 # check if the "open" numbering is requested (00X)
@@ -13,6 +14,7 @@ while getopts "o" flag; do
 esac
 done
 
+# pattern to rename files after
 targetbasename="$1"
 shift
 
