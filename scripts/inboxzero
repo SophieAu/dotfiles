@@ -17,6 +17,11 @@ function supposedToBe() {
   return 0
 }
 
+
+# Code Commits
+supposedToBe "Did you commit all code?"
+
+
 # 0.Inbox
 inboxFiles=$(find ~/0.Inbox/ -not \( -path '*/.*' -o -path '*/' \) -printf ' * %P\n')
 fileCount=$(echo "$inboxFiles" | wc -l)
