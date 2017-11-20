@@ -20,11 +20,3 @@ esac
 
 exit
 
-
-# omitted code, kept because it's a nice way to extract the basename and extension
-extension=${archive##*.}
-basename=${archive%.*}
-
-echo "$extension"
-echo "$basename"
-
