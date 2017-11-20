@@ -2,7 +2,11 @@
 
 #extracts an archive whatever its extension (well, it can do tar, rar and zip)
 
+
+# get the archive
 archive=$1
+
+# extract based on extension
 case "$archive" in
  *.tar.bz2)
     echo "Extracting tar..."
