@@ -4,6 +4,9 @@
 # Brief: Calls various scripts to make sure my laptop is as tidy as possible when I turn it off for the night
 
 
+# Starting Dialogue
+echo -e "############### EVENING SHUTDOWN ###############\n"
+
 # checking for Inbox Zero
 inboxzero
 
