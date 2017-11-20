@@ -11,7 +11,6 @@ echo "Backing up home folder"
 backup
 echo
 
-
 # Cleaning up Temp Files
 rm -rf ~/.cache/thumbnails/*
 
@@ -24,8 +23,8 @@ echo
 while true; do
  read -p "Do you want to suspend or shutdown the system? [sus/shu] " ans
  case $ans in
-  sus) echo "suspending..."; sysus;;
-  shu) echo "shutting down..."; echo "shu";;
+  sus) echo "suspending..."; & sysus;;
+  shu) echo "shutting down..."; shutdown now;;
  esac
 done
 
