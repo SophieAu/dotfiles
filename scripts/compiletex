@@ -17,5 +17,5 @@ rm -f $baseName.log
 rm -f $baseName.lot
 rm -f $baseName.toc
 
-exit 0
+exit
 
