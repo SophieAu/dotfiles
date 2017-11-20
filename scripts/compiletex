@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+
+# get the latex source as an argument
 file="$1"
 baseName=${file%.tex}
 
