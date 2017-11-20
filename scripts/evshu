@@ -71,6 +71,3 @@ done
 
 exit
 
-# systemctl suspend
-# systemctl poweroff
-
