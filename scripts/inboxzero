@@ -9,9 +9,7 @@ function supposedToBe() {
   while true; do
     case $yn in
       [Yy]) break;;
-      [Nn])
-		echo "You better clean ${2-them} out then."
-  		read -p "Done? [y/N] " yn;;
+      [Nn]) echo "You better do it now then."; read -p "Done? [y/N] " yn;;
     esac
   done
   echo
@@ -23,21 +21,21 @@ inboxFiles=$(find ~/0.Inbox/ -not \( -path '*/.*' -o -path '*/' \) -printf ' * %
 fileCount=$(echo "$inboxFiles" | wc -l)
 if [[ $fileCount != 0 ]] ; then
   echo -e "There are $fileCount files in 0.Inbox:\n$inboxFiles"
-  supposedToBe "Are they supposed to be there?"
+  supposedToBe "Sure you shouldn't clean them out?"
 fi
 
 # Camera Uploads
 cameraUploads=$(find ~/New\ Photos/ -not \( -path '*/.*' -o -path '*/' \) | wc -l)
 if [[ ! $cameraUploads == 0 ]] ; then
   echo "There are new photos."
-  supposedToBe "Are they supposed to be there?"
+  supposedToBe "Sure you shouldn't move them into the Photo folder?"
 fi
 
 # Firefox Bookmarks
 supposedToBe "Did you clean up the Firefox Bookmarks?"
 
 # Home Folder
-supposedToBe "Did you clean up your home directory?" "it"
+supposedToBe "Did you clean up your home directory?"
 
 exit
 
