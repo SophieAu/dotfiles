@@ -3,6 +3,20 @@
 
 
 # get time of day
+tOD=$(date +%H%M)
+
+# set phase as "twilight" if it is not specified by a cl argument
+phase=${1:-"twilight"}
+
+# determine current actual phase of the day
+if [[ tOD -lt 0600 || tOD -ge 1900 ]] ; then
+	phase="night"
+elif [[ toD -ge 0730 || tOD -lt 1700 ]] ; then
+	phase="day"
+fi
+
+# set wallpaper
+feh --bg-fill "/home/solvi/i.dotfiles-repo/wall-${phase}.jpg" 
 
 exit
 
