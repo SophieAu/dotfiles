@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Name: Crontab add
+# Brief: Opens the current user's crontab for editing and saves the whole crontab to file
+
+
+# open crontab for editing
+crontab -e
+
+
+# save "new" crontab to file
+crontabFile="/home/solvi/dev/0.dotfiles/crontab"
+currentDateTime=$(date --rfc-3339=seconds)
+echo -e "\n# ${currentDateTime}\n$(crontab -l)\n" >> "$crontabFile"
+
+exit
+
