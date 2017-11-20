@@ -10,6 +10,7 @@ function supposedToBe() {
     case $yn in
       [Yy]) break;;
       [Nn]) echo "You better do it now then."; read -p "Done? [y/N] " yn;;
+      * ) read -p "Are you done or not? [y/N] " yn;;
     esac
   done
   echo
