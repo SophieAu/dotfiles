@@ -17,7 +17,7 @@ else
 fi
 
 # set wallpaper
-feh --bg-fill "/home/solvi/i.dotfiles-repo/wall-${phase}.jpg" 
+DISPLAY=:0 feh --bg-fill "/home/solvi/i.dotfiles-repo/wall-${phase}.jpg" 
 
 exit
 
