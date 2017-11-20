@@ -13,23 +13,6 @@ while getopts "o" flag; do
 esac
 done
 
-# if the file has an extension, it is extracted along with the dot
-function get_extension {
- # file has no extension
- if [[ "$1" != *.* ]]; then
-  echo ""
-  return
- fi
-
- ext="${1##*.}"
- if [ "$ext" == "JPG" ]; then
-  ext="jpg"
- fi
-
- echo ".$ext"
-}
-
-
 targetbasename="$1"
 shift
 
@@ -45,6 +28,25 @@ while true; do
     [Nn] ) echo "Exiting...";  exit;;
   esac
 done
+
+
+# Get the extension of a file, if it has one
+function get_extension {
+  # file has no extension
+  if [[ "$1" != *.* ]]; then
+	echo ""
+	return
+  fi
+
+  # file has an extension, it is extracted along with the dot
+  ext="${1##*.}"
+  if [ "$ext" == "JPG" ]; then
+	ext="jpg"
+  fi
+  echo ".$ext"
+  return
+}
+
 
 # actual renaming of the files
 # shellcheck disable=SC2059
