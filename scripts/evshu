@@ -1,44 +1,10 @@
 #!/bin/bash
-# shellcheck disable=SC2162
+
+
+
 
 # checking for Inbox Zero
-
-#function doItNow
-function supposedToBe() {
-  read -p "$1 [y/N] " yn
-  while true; do
-    case $yn in
-      [Yy]) break;;
-      [Nn])
-		echo "You better clean ${2-them} out then."
-  		read -p "Done? [y/N] " yn;;
-    esac
-  done
-  echo
-  return 0
-}
-
-# 0.Inbox
-inboxFiles=$(find ~/0.Inbox/ -not \( -path '*/.*' -o -path '*/' \) -printf ' * %P\n')
-fileCount=$(echo "$inboxFiles" | wc -l)
-if [[ $fileCount != 0 ]] ; then
-  echo -e "There are $fileCount files in 0.Inbox:\n$inboxFiles"
-  supposedToBe "Are they supposed to be there?"
-fi
-
-# Camera Uploads
-cameraUploads=$(find ~/Camera\ Uploads/ -not \( -path '*/.*' -o -path '*/' \) | wc -l)
-if [[ ! $cameraUploads == 0 ]] ; then
- echo "There are unsorted photos in Camera Uploads."
-  supposedToBe "Are they supposed to be there?"
-fi
-
-# Firefox Bookmarks
-supposedToBe "Did you clean up the Firefox Bookmarks?"
-
-# Home Folder
-supposedToBe "Did you clean up your home directory?" "it"
- 
+inboxzero
 
 # Backing up
 #echo "Backing up Files"
