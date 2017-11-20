@@ -13,3 +13,5 @@ fi
 
 systemctl suspend
 
+exit
+
