@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+
+# check for mounted drives and unmount if necessary
 allTheDrives=$(find /media/ -mindepth 1 -maxdepth 1 -printf '%f')
 if [[ $allTheDrives != "" ]] ; then
  for drive in "$allTheDrives" ; do

@@ -3,9 +3,11 @@
 # potentially shrink all pdfs that are passed as arguments
 # actual shrinking is not guaranteed as the input files might already be fairly small
 
+
 for file in "$@"
 do
  echo "$file"
+# do this for each file that was passed as an argument
 
  # rename the old file to make it clear which is the optimized one
  oldfile="${file%.*} (old).pdf"

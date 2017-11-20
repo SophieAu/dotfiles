@@ -3,6 +3,7 @@
 
 
 
+# asks if location was cleaned up/is supposed to be that way
 function supposedToBe() {
   read -p "$1 [y/N] " yn
   while true; do
