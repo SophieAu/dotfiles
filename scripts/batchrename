@@ -32,7 +32,6 @@ function get_extension {
 
 targetbasename="$1"
 shift
-counter=1;
 
 # warning about which files are renamed
 echo "You are about to rename the following files:"
@@ -47,16 +46,17 @@ while true; do
  esac
 done
 
-# actual renaming
+# actual renaming of the files
+# shellcheck disable=SC2059
+counter=1;
 for file in "$@" ; do
- extension=$(get_extension "$file")
- # shellcheck disable=SC2059
- number=$(printf "$numberpattern" $counter)
- newfilename="${targetbasename} ${number}${extension}"
+  extension=$(get_extension "$file")
+  number=$(printf "$numberpattern" $counter)
+  newfilename="${targetbasename} ${number}${extension}"
 
- echo "$file -> $newfilename"
- mv -i "${file}" "${newfilename}"
- ((counter++));
+  echo "$file -> $newfilename"
+  mv -i "${file}" "${newfilename}"
+  ((counter++));
 done
 
 exit
