@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Name: System Suspension
+# Brief: Suspends the systems and unmounts drives beforehand if necessary
 
 
 # check for mounted drives and unmount if necessary

@@ -1,6 +1,7 @@
 #!/bin/bash
 
-#extracts an archive whatever its extension (well, it can do tar, rar and zip)
+# Name: Extract
+# Brief: Extracts an archive whatever its extension (well, it can do tar, rar and zip)
 
 
 # get the archive

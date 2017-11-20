@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Name: Wallpaper Switcher
+# Brief: Switches the wallpaper depending on the time of day
 
 
 # get time of day

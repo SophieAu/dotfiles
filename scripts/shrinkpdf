@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# potentially shrink all pdfs that are passed as arguments
-# actual shrinking is not guaranteed as the input files might already be fairly small
+# Name: Shrink PDF
+# Brief: Potentially shrink all pdfs that are passed as arguments. Actual shrinking is not guaranteed as the input files might already be fairly small
 
 
 # do this for each file that was passed as an argument

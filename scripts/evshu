@@ -1,6 +1,7 @@
 #!/bin/bash
 
-
+# Name: Evening Shutdown
+# Brief: Calls various scripts to make sure my laptop is as tidy as possible when I turn it off for the night
 
 
 # checking for Inbox Zero

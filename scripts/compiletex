@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Name: Compile LaTeX
+# Brief: Compiles a LaTeX document using rubber and then deletes all meta files
 
 
 # get the latex source as an argument

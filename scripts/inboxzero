@@ -1,7 +1,8 @@
 #!/bin/bash
+
+# Name: Inbox Zero
+# Brief: Checks selected folders for contents and asks user if various locations were tidied up yet.
 # shellcheck disable=SC2162
-
-
 
 # asks if location was cleaned up/is supposed to be that way
 function supposedToBe() {
