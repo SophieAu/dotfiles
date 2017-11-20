@@ -6,15 +6,9 @@
 # checking for Inbox Zero
 inboxzero
 
-# Backing up
-#echo "Backing up Files"
-#pmount /dev/sdb1
-#cd /dev/sdb1
-
-#homeFolderFiles=ls ~/
-
-#cp -r -u /dev/sdb1/0.Backup/ $homeFolderFiles
-#pumount /dev/sdb1
+# Backing up Files 
+echo "Backing up home folder"
+backup
 echo
 
 

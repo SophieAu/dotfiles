@@ -1,0 +1,54 @@
+#!/bin/bash
+
+# Name: Backup
+# Brief: Created a backup of all the visible files and folders in my home directory
+
+
+# if no backupdrive is specified, use /media/sdb1
+readonly BACKUPDRIVE=${1:-"/media/sdb1"}
+if ! [ -d "$BACKUPDRIVE" ]; then
+	echo "Backup device not found"
+	exit 1
+fi
+
+
+# check for existing backups
+existingBackups=$(ls $BACKUPDRIVE | grep "0\.Backup_")
+noOfBackups=$(echo "$existingBackups" | wc -l)
+oldestBackup=$(echo "$existingBackups" | sort | head -1)
+
+
+# create new backup
+newBackup=$BACKUPDRIVE/0\.Backup_$(date +%Y-%m-%d)
+
+function backingUp () {
+  folder=${1##*/}
+  if [[ "$folder" = "Archive" ]] ; then
+	echo "Arch"
+	rsync -azu --progress "$1" "$BACKUPDRIVE/0.Backup_Archive"
+  elif [[ $folder = "Pictures" ]] ; then
+	echo "Pic"	
+	rsync -azu --progress "$1" "$BACKUPDRIVE/0.Backup_Pictures"
+  elif [[ $folder = "Reference" ]] ; then
+	echo "ref"
+	rsync -azu --progress "$1" "$BACKUPDRIVE/0.Backup_Reference"
+  else
+	echo "$folder"
+	rsync -azu --progress "$1" "$newBackup"
+  fi
+  return 0
+}
+
+for stuff in ~/* ; do
+  backingUp "$stuff"
+done
+
+
+# remove backups older than one week
+if [[ $noOfBackups -gt 7 ]] ; then
+	rm -rvi "${BACKUPDRIVE:?}/$oldestBackup"
+fi
+
+
+exit
+
