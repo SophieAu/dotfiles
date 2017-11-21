@@ -13,7 +13,7 @@ if [[ $allTheDrives != "" ]] ; then
  done
 fi
 
-systemctl suspend
+exit & systemctl suspend
 
 exit
 
