@@ -4,6 +4,9 @@
 # Brief: Compiles a LaTeX document using rubber and then deletes all meta files
 
 
+# set the directory for custom latex styles
+export TEXINPUTS=":~/lib/LaTeX:"
+
 # get the latex source as an argument
 file="$1"
 baseName=${file%.tex}
