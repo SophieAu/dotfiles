@@ -1,0 +1,60 @@
+% koma_env.tex
+\documentclass[a4paper]{scrlttr2}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{url}
+
+
+\include{persInf} % loads:
+%\setkomavar{fromname}{}
+%\setkomavar{fromaddress}{}
+%\setkomavar{fromphone}{}
+%\setkomavar{fromemail}{}
+%\setkomavar{fromurl}{}
+
+\KOMAoptions{fromphone=true,fromemail=true,fromurl=true}
+\KOMAoptions{backaddress=false,foldmarks=false}
+
+\begin{document}
+
+\begin{letter}{Director \\ Doe \& Co \\ 35 Anthony Road
+\\ Newport \\ Ipswich IP3 5RT}
+
+\setkomavar{subject}{Wikipedia}
+\opening{Dear Sir or Madam,}
+
+I am writing to you on behalf of the Wikipedia project
+(\url{http://www.wikipedia.org/}), an endeavour to build a
+fully-fledged multilingual encyclopaedia in an entirely open
+manner, to ask for permission to use your copyrighted material.
+
+\ldots 
+ 
+That said, allow me to reiterate that your material will be used
+to the noble end of providing a free collection of knowledge for
+everyone; naturally enough, only if you agree. If that is the
+case, could you kindly fill in the attached form and post it back
+to me? We shall greatly appreciate it.
+ 
+Thank you for your time and consideration.
+
+I look forward to your reply.
+
+\closing{Yours Faithfully,}
+\ps{P.S. You can find the full text of GFDL license at
+\url{http://www.gnu.org/copyleft/fdl.html}.}
+\encl{Copyright permission form}
+
+\end{letter}
+
+\end{document}
+
+
+
+
+
+
+
+
+
