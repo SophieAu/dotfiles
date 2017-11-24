@@ -34,7 +34,7 @@ function backingUp () {
 	rsync -azu --progress "$1/" "$BACKUPDRIVE/0.Backup_Reference"
   else
 	echo "$folder"
-	rsync -azu --progress "$1" "$newBackup"
+	rsync -azuL --progress "$1" "$newBackup"
   fi
   return 0
 }
