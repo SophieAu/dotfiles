@@ -12,12 +12,12 @@ baseName=${file%.tex}
 rubber -d "$file"
 
 # remove all the meta files
-rm -f $baseName.aux
-rm -f $baseName.log
-rm -f $baseName.dvi
-rm -f $baseName.log
-rm -f $baseName.lot
-rm -f $baseName.toc
+rm -f "$baseName.aux"
+rm -f "$baseName.log"
+rm -f "$baseName.dvi"
+rm -f "$baseName.log"
+rm -f "$baseName.lot"
+rm -f "$baseName.toc"
 
 exit
 
