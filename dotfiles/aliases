@@ -9,3 +9,5 @@ alias rm="rm -i"
 
 alias dnupgr="sudo dnf upgrade"
 
+alias sysus='bash -c "aumount && systemctl suspend"'
+
