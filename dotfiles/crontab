@@ -4,3 +4,10 @@ PATH="/usr/bin:/bin:/home/solvi/bin"
   0  6,7,17,19  *   *   *  exec wallswitch
   0  19         *   *   *  DISPLAY=:0 exec termite -e evshu
 
+
+# 2017-11-26 13:44:09+01:00
+PATH="/usr/bin:/bin:/home/solvi/bin"
+#MIN HOUR      DAY MON DOW COMMAND
+  0  6,8,17,19  *   *   *  exec wallswitch
+  0  19         *   *   *  DISPLAY=:0 exec termite -e evshu
+
