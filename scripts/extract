@@ -12,7 +12,7 @@ case "$archive" in
  *.tar.bz2)
     echo "Extracting tar..."
     tar -xjvf "$archive";;
- *.tar.gz)
+ *.tar.gz|*.tgz)
     echo "Extracting tar..."
     tar -xzvf "$archive";;
  *.rar)
