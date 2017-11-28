@@ -10,18 +10,11 @@ if [ -f $HOME/.aliases ]; then
     . $HOME/.aliases
 fi
 
-# User specific aliases and functions
-alias vim="gvim -v"
 export EDITOR="gvim -v"
 export VISUAL="$EDITOR"
 
-alias syshu="systemctl poweroff"
-alias syreb="systemctl reboot"
 
-alias lsc="ls --color=auto -N"
-alias rm="rm -i"
 
-alias dnupgr="sudo dnf upgrade"
 
 alias ffs='echo sudo $(history -p !!) && sudo $(history -p !!)'
 

@@ -1,0 +1,11 @@
+# User specific aliases and functions
+alias vim="gvim -v"
+
+alias syshu="systemctl poweroff"
+alias syreb="systemctl reboot"
+
+alias lsc="ls -N --color=auto"
+alias rm="rm -i"
+
+alias dnupgr="sudo dnf upgrade"
+
