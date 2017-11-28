@@ -21,6 +21,8 @@ case "$archive" in
  *.zip)
     echo "Extracting zip..."
     unzip "$archive";;
+  *)
+	echo "Didn't recognize the extension."
 esac 
 
 exit
