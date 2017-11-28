@@ -10,21 +10,21 @@ if [ -f $HOME/.aliases ]; then
     . $HOME/.aliases
 fi
 
-export EDITOR="gvim -v"
-export VISUAL="$EDITOR"
-
-
-
-
-
-# to get the "standard" prompt back, simply comment out the line below
-PS1="\e[1;15m\w \e[1;91m>>  \e[0m"
-
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-eval "$(thefuck --alias)"
+# Change the prompt
+PS1="\e[1;15m\w \e[1;91m>>  \e[0m"
+
+
+# Set vim-mode of gvim  as standard editor
+export EDITOR="gvim -v"
+export VISUAL="$EDITOR"
 
 # don't save duplicates in bash history, delete duplicates except newest
 export HISTCONTROL=ignoreboth:erasedups
+
+
+
+eval "$(thefuck --alias)"
 
