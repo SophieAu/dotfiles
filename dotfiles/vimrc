@@ -1,6 +1,7 @@
 :set nu "show line number
 :set ruler "show the ruler, should be default already
 :set tabstop=4 " set indent width to 4 chars
+:set hidden "hide buffers instad of closing them
 
 
 "F5 prints the current date and time
