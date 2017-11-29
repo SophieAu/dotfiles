@@ -1,4 +1,5 @@
 :set nu "show line number
+:set ruler "show the ruler, should be default already
 :set tabstop=4 " set indent width to 4 chars
 
 
