@@ -6,9 +6,9 @@
 
 
 "Custom aliases
-:command Tex ! compiletex "%"
-:command Texdf silent ! zathura --fork "%:r.pdf"
-:command Rline %s/\r//g
+:command! Tex ! compiletex "%"
+:command! Texdf silent ! zathura --fork "%:r.pdf"
+:command! Rline %s/\r//g
 
 
 "F5 prints the current date and time
