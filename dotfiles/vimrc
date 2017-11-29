@@ -5,6 +5,10 @@
 :set incsearch "show possible matches while searching
 
 
+"Custom aliases
+:command Tex ! compiletex "%"
+:command Texdf silent ! zathura --fork "%:r.pdf"
+:command Rline %s/\r//g
 "F5 prints the current date and time
 :nnoremap <F5> "=strftime("%F %T")<CR>P
 :inoremap <F5> <C-R>=strftime("%F %T")<CR>
