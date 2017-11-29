@@ -1,6 +1,6 @@
 :set nu "show line number
 :set ruler "show the ruler, should be default already
-:set tabstop=4 " set indent width to 4 chars
+:set tabstop=4 "set indent width to 4 chars
 :set hidden "hide buffers instad of closing them
 :set incsearch "show possible matches while searching
 
@@ -9,14 +9,14 @@
 :command Tex ! compiletex "%"
 :command Texdf silent ! zathura --fork "%:r.pdf"
 :command Rline %s/\r//g
+
+
 "F5 prints the current date and time
 :nnoremap <F5> "=strftime("%F %T")<CR>P
 :inoremap <F5> <C-R>=strftime("%F %T")<CR>
-
 "F4 prints the current date
 :nnoremap <F4> "=strftime("%F")<CR>P
 :inoremap <F4> <C-R>=strftime("%F")<CR>
-
 "F6 prints the current time
 :nnoremap <F6> "=strftime("%T")<CR>P
 :inoremap <F6> <C-R>=strftime("%T")<CR>
