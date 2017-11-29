@@ -1,0 +1,71 @@
+# Starting up tmux
+tmux ls # see all sessions
+tmux new -s <session-name> # create a new session with the specified name
+tmux a # connect to the first available existing session
+tmux a -t <session-name> # connect to the specified session
+
+ 
+# PREFIX ANY COMMAND WITH <ctrl>-a
+
+# Window management
+c -> create a new window
+n -> go to the next window
+p -> go to the previous window
+0 -> go to window 0 (also works with 1-9)
+w -> show list of all windows (you can then select the one you want to go (back) to with enter)
+, -> rename the current window
+. -> move window
+& -> close current window
+x -> close current window if it has only one pane
+
+# Pane Management
+" -> split pane horizontally
+% -> split pane vertically
+  -> (space key) toggle between horizontal and vertical
+q -> show pane numbers
+o -> toggle between panes
+} -> swap with next pane
+{ -> swap with previous pane
+z -> toggle pane zoom (let pane temporarily take up whole window
+! -> move pane to a new window of its own
+x -> destroy current pane
+<arrow> -> move to adjoining pane
+<ctrl>-<arrow> -> resize pane by 1 character
+<alt>-<arrow>  -> resite pane by 5 characters
+
+# Session Management
+s -> see all sessions (you can then select the one you want to go back to with enter)
+d -> detach from the session (close it without closing the actual windows etc)
+$ -> name session
+tmux switch -t <session-name> -> switch to the specified session
+
+
+
+# Copy Mode (basically like vim visual mode)
+[ -> enter copy mode
+q -> exit copy mode
+] -> paste copied test
+# to work through selecting stuff, use vim keybindings for moving
+
+# Buffers
+tmux list-buffers -> show all buffers with exerpt from their content
+tmux show-buffer -> prints most recent copy selection to command line
+tmux save-buffer <file> -> save selection to file
+tmux show-buffer -b <buffer-name> -> print contents of selected buffer to command line
+tmux save-buffer -b <buffer-name> -> print contents of selected buffer to file
+
+
+# Command Mode
+: -> enter command mode
+<Ctrl>-c -> (no prefix) exit command mode
+
+# reloading the tmux config
+tmux source-file ~/.tmux.conf
+# or
+<ctrl>-b :source-file ~/.tmux.conf
+
+
+# killing a session
+tmux kill-server # kills all windows and sessions including detached ones
+tmux kill-session -a # kill all sessions except the one you're currently in
+tmux kill-session -t <session> # kills the specified session

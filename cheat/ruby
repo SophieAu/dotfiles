@@ -1,0 +1,18 @@
+# to setup a new project that you got from the interwebs
+
+# to get all the required gems (listed in the gem file)
+cd path/to/project/folder
+bundle install
+
+# update the bash dorfiles to apply changes
+source .bashrc .bash_profile
+
+# serve the rails website
+rails s
+
+
+
+# if the database complains about something
+rake db:migrate
+rake db:create_<database name>
+

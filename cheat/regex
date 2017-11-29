@@ -1,0 +1,49 @@
+# Don't forget to excape meta-characters (like ., (, $, ...) with \
+
+# Anchors
+^   -> start of string or start of line
+\A  -> start of String
+$   -> end of string or end of line
+\Z  -> end of string
+\b  -> word boundary
+\B  -> not word boundary
+\<  -> start of word
+\>  -> end of word
+
+# Character Classes
+\c  -> control char
+\s  -> white space
+\S  -> not white space
+\d  -> digit
+\D  -> not digit
+\w  -> word
+\W  -> not word
+\x  -> hexadecimal digit
+\O  -> octal digit
+
+# Quantifiers
+*   -> 0 or more 
++   -> 1 or more
+?   -> 0 or 1
+{3} -> exactly 3
+{3,}  -> 3 or more
+{3,5} -> 3 or 4 or 5
+
+# Groups and Ranges
+.      -> any character except newline
+(a|b)  -> a or b
+[abc]  -> a or b or c
+[^abc] -> not a or b or c
+[a-q]  -> lower case a or b or ... or q
+[A-Q]  -> upper case A or B or ... or Q
+[0-7]  -> digits 0 or 1 or ... or 7
+
+# Special Characters
+\n   -> new line
+\r   -> carriage return
+\t   -> tab
+\v   -> vertical tab
+\f   -> form feed
+\xxx -> octal character XXX
+\xhh -> hexal caracter hh
+

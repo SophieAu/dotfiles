@@ -1,0 +1,21 @@
+# collection of smaller cheats
+commandline
+
+# configure internet
+nmcli
+
+# for searching files
+find
+
+# for viewing files and such
+files
+chmod
+links
+
+# configuring cron jobs
+cron
+
+# handling jobs and/or processes
+jobs
+processes
+

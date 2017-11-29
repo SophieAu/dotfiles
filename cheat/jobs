@@ -1,0 +1,28 @@
+# Stop (but don't terminate) a command
+<CRTL>-z
+
+# see all jobs
+jobs
+
+# resume a command (if there is no number specified, get the latest (LIFO))
+fg %X
+
+# resume a command but keep the command line available (output shows up but you can enter another command)
+bg %X
+
+# kill a job
+kill %X
+
+
+
+# start command in "background-mode"
+<command> &
+
+# to start a command that runs independent of the terminal (stays open when the terminal is closed)
+# this means that you have to close the command by it's PID (pgrep -a <command> whould get it)
+# any output is saved in ./nohup.out
+nohup <command>
+
+# to detach a running job from the terminal (like nohup, but without the output being saved)
+disown %X
+

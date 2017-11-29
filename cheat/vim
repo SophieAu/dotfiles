@@ -1,0 +1,36 @@
+# General important commands and such
+:w  -> save current buffer
+:x  -> close vim save if necessary
+:wq -> save buffer, then close
+:q  -> close vim
+:q! -> force close vim
+
+:e <file> -> open new file
+:e!       -> reset current file
+:r <file> -> append <file> (or !<command> for a bash command) into current file the line below the current
+
+:sh         -> go to shell temporarily ($exit shell to get back to vim)
+:!<command> -> run bash command
+
+:S -> open vim file explorer
+
+<ctrl>-g -> show file info
+
+<ctrl>-n -> autocomplete the word
+
+
+
+# Buffers
+:bd     -> close the current buffer. won't work if it hasn't been saved yet
+:b<num> -> go to buffer <num>
+:ls     -> show all current buffers
+
+
+
+# Windows
+:split     -> split current window/file in two (one on top, one on bottom)
+<ctrl>-w s -> "
+<ctrl>-w n -> create new empty window 
+:vsplit   -> split current window/file in two (one left, one right)
+:args      -> list all windows
+

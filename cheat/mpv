@@ -1,0 +1,64 @@
+# Keyboard control
+
+q -> quit
+Q -> quit but save the current playback position
+
+f     -> enter fullscreen
+<esc> -> exit fullscreen
+o     -> show progress bar
+O     -> toggle progress bar
+
+s -> take a screenshot (with subtitles if they're activated)
+S -> take a screenshot without subtitles
+
+
+
+# VIDEO CONTROLS
+p / <space>       -> pause/resume playback
+.                 -> go forward one frame (first press pauses playback)
+,                 -> go backward one frame (first press pauses playback)
+<left> / <right>  -> go back/forward 5 seconds
+<up>   / <down>   -> go forward/back 1 minute
+<pgup> / <pgdown> -> go to start of current/next chapter
+<shift>-<pgup> / -<pgdown> -> go back/forward by 10 minutes
+<shift>-<left> / -<right>  -> go back/forward 1 second
+
+< / >   -> go backward/forward in the playlist
+<enter> -> go forward in the playlist
+
+[ / ]       -> decrease/increase playback speed by 10%
+{ / }       -> halve/double playback speed
+<backspace> -> reset playback speed to normal
+
+- -> cycle through available video tracks
+A -> cycle aspect ratios
+
+
+# AUDIO CONTROLS
+/ / * -> decrease/increase volume
+9 / 0 -> decrease/increase volume
+m     -> mute sound
+
+# -> cycle through available audio tracks
+
+<ctrl>-+ / -- -> adjust audio delay by +/- 0.1 seconds
+
+
+
+# SUBTITLE CONTROLS
+v     -> toggle subtitle visibility
+i / j -> cycle through available subtitles
+x / z -> adjust subtitle delay by +/- 0.1 seconds
+
+
+
+
+# Command Line Options
+--pause            # start player in pause state
+--shuffle          # play files in random order
+--loop             # loop the file (first file if playing a playlist)
+--loop-playlist    # loop a playlist
+--keep-open        # do not terminate the player when the file is finished
+--audio-display=no # don't show the cover art of a music file
+
+

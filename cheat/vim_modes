@@ -1,0 +1,35 @@
+# Panic Exit
+<ESC>    -> all the things
+<Ctrl>-q -> if <esc> doesn't work
+
+
+
+# Entering Insert Mode
+i -> enter before the current char
+I -> enter at the start of the current line
+a -> enter after the current char
+A -> enter at the end of the current line
+o -> start new line afterthe current
+O -> start new line before the current
+s -> delete current char and enter insert
+S -> delete current line and enter insert
+
+c<mov> -> delete <mov> and enter insert
+cc     -> delete current line and enter insert (like S)
+gi     -> enter where insert mode was last exited
+
+<num><enter command><char><esc> -> insert <char> <num> times where you just entered
+
+
+
+# Replace Mode
+r -> replace current char (doesn't really go into that mode)
+R -> replace all chars after the current one with new ones
+
+
+
+# Visual Mode
+v        -> enter char-wise visual
+V        -> enter line-wise visual
+<ctrl>-v -> enter blockwise visual
+

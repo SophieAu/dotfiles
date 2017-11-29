@@ -1,0 +1,9 @@
+# build the site, see result at 'localhost:4000'
+# rebuilds automatically if there are changes
+jekyll serve
+
+# see breakdown of build time
+jekyll serve --profile
+
+# builds only, no browser preview
+jekyll build

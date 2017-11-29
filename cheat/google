@@ -1,0 +1,12 @@
+"search term"       -> searches for those exact words in that exact order
+search -this        -> searches for "search" but without excludes results with "this"
+search this OR that -> searches for "search" and anything with either "this" or "that"
+search ~this-ish    -> searches for "sarch" and "this-ish" and its synonyms
+site:search.com meh -> searches for "meh" on the "seatch.com" site
+search * this`      -> "*" is a wildcard for any word or letter
+search 100.. 200`   -> searches for any number between 100 and 200
+intitle:search`     -> searches only in the page title
+inurl:search`       -> searches only in the page url
+intext:search`      -> searches only in the page body
+related:search.com` -> brings up sites related to "search.com"
+

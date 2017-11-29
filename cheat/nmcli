@@ -1,0 +1,51 @@
+# get overview of connections and devices
+nmcli
+
+# toggle wifi
+nmcli radio wifi [on/off]
+nmcli r w [on/off]
+
+
+# connect to a connection
+nmcli c up id <connection_name>
+
+# disconnect from a connection (aka remove it from saved conections list)
+nmcli c down id <connection_name>
+
+
+# see available wifi connections
+nmcli device wifi
+nmcli d w
+
+# set up a wifi connection
+nmcli -a device wifi connect <SSID>
+nmcli -a d w c <SSID>
+
+
+
+# get current connectivitiy state
+nmcli networking connectivity
+nmcli n c
+# states are:
+#    none -> the host is not connected to any network.
+#    portal -> the host is behind a captive portal and cannot reach the full Internet.
+#    limited -> the host is connected to a network, but it has no access to the Internet.
+#    full -> the host is connected to a network and has full access to the Internet.
+#    unknown -> the connectivity status cannot be found out.
+
+# see all connections
+nmcli connection
+nmcli c
+
+# delete a connection
+nmcli connection delete id <connection_name>
+
+
+# show all devices and their status
+nmcli device
+nmcli d
+
+# toggle networking on/off
+nmcli networking [on/off]
+nmcli n [on/off]
+

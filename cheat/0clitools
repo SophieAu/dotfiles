@@ -1,0 +1,22 @@
+# file explorer
+ranger
+
+# commands to be used in (basically) any terminal
+terminal
+
+# commands specific to my current terminal emulator
+termite
+
+# terminal multiplexer
+tmux
+
+# text editor
+vim
+vim_editing
+vim_exmode
+vim_modes
+vim_movement
+
+# various commands to control X.org
+xhelpers
+

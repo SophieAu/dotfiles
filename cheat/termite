@@ -1,0 +1,17 @@
+# Insert (Normal) Mode
+<ctrl>-<shift>-c -> copy to CLIPBOARD
+<ctrl>-<shift>-v -> paste from CLIPBOARD
+
+<ctrl>-<shift>-<up    -> scroll up a line
+<ctrl>-<shift>-<down> -> scroll down a line
+<shift>-<pgup>        -> scroll up a page
+<shift>-<pgdown>      -> scroll down a page
+<ctrl>-<shift>-l      -> reset and clear
+
+<ctrl>-+ -> increase font size
+<ctrl>-- -> decrease font size
+<ctrl>-= ->	reset font size to default
+
+<ctrl>-<shift>-t -> open (bash) terminal in the current directory
+<ctrl>-<shift>-r -> reload configuration file
+

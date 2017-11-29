@@ -1,0 +1,106 @@
+# Meta Signs
+'x' -> echo exact contents. nothing gets replaced
+´x´ -> is interpreted as a simple command line command
+"x" -> spaces are not used as delimiters, meta signs and variables are replaced though
+
+
+# To implement a for loop:
+for file in * ; do # if you want a counter for-loop, do "for i in `seq 1 10`"
+    echo $file found;
+done
+
+# To implement a case command:
+case "$1"
+in
+    0) echo "zero found";;
+    1) echo "one found";;
+esac
+
+# while loop
+while [ boolean expression ] ; do
+	echo "In the while loop"
+done
+until [ boolean expression ] ; do
+	echo "until loop is kinda the same"
+done
+
+# if statement
+if [ boolean expression ] ; then
+	echo "hi"
+elif [ boolean ] ; then
+	echo "dude"
+else
+	echo "cheers"
+fi
+
+# Arguments
+$0 -> program name
+$N -> Nth argument
+$@ -> all arguments
+$# -> number of arguments
+
+
+# Tests for the boolean
+# numbers
+-lt -> less than
+-gt -> greater than
+-eq -> equal to
+-ne -> not equal to
+-ge -> greater or equal
+-le -> less or equal
+
+# files
+-d -> is a directory
+-f -> is a file
+-x -> is executable
+-r -> is readable
+-w -> is writeable
+
+# strings
+=  -> equal to
+!= -> not equal to
+-z -> zero length
+-n -> not zero length
+
+&& -> and
+|| -> or
+!  -> not
+
+
+# Create a function
+function <func_name> {
+  echo "This is a function"
+  return # return cannot return a value
+}
+
+
+# get file basename and extension
+extension=${filename##*.} # remove everything before and including the last dot
+basename=${filename%.*} # remove everything after the last dot
+basename=${filename%%.*} # remove everything after the first dot
+
+
+
+# User Input
+read NAME        # -> $NAME="Hans Wurst"
+read FNAME LNAME # -> $FNAME=Hans $LNAME=Wurst
+
+
+# Maths needs to have one of the following brackets to actually calculate shit
+$((A+B))
+$[A+B]
+$[3/4] | bc -l # to get doubles, maths only does int
+
+# Turn on debugging:
+set -x
+
+# Turn off debugging:
+set +x
+
+# Retrieve N-th piped command exit status
+printf 'foo' | fgrep 'foo' | sed 's/foo/bar/'
+echo ${PIPESTATUS[0]}  # replace 0 with N
+
+# Lock file:
+( set -o noclobber; echo > my.lock ) || echo 'Failed to create lock file'
+

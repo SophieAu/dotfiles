@@ -1,0 +1,30 @@
+:<start>,<end><command><target>
+
+# <start>, <end> and <target> are (relative) line numbers:
+.  -> current line
+$  -> last line of the doc
+%  -> all lines (doesn't need a pair)
++N -> next N lines
+-N -> previous N lines
+
+# <command> is:
+m    -> move
+d    -> delete (no <target>)
+co   -> copy
+w    -> write to file (<target> is <space><filename>)
+sort -> sort lines alphabetically (no target)
+
+:g/<pattern>  -> shows all lines that match <pattern>
+:g!/<pattern> -> show all lines that don't match <pattern>
+
+
+
+# Search
+:s/<alt>/<neu>    -> search-replace first <alt> on current line
+:s/<alt>/<neu>/g  -> search-replace all <alt> on current line
+:s/<alt>/<neu>/gc -> search-replace all <alt> on current line but ask for confirmation
+:s/<alt>/<neu>/gi -> search-replace all <alt> on current line but case insensitive
+
+:%s/alt>/<neu>  -> search-replace whole doc, g and gc work the same
+:X,Ys/<alt>/<neu> -> search between lines X and Y
+

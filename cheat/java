@@ -1,0 +1,14 @@
+# Compile Java
+# go to source folder
+cd /path/to/src/
+# compile all the classes
+javac ./*/*.java # to get all files in all the folders below the current one
+# run the program
+java <mainpackage>.<starter class>
+
+# Change java version used by the system
+alternatives --config java
+
+# Create a jar file
+jar cf jar-file input-file(s)
+

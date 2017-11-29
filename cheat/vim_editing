@@ -1,0 +1,51 @@
+# Vim works basically by doing this:
+# <number><verb><noun>
+
+. -> repeat last command
+u -> undo last command
+
+
+# Verbs
+d -> delete
+c -> change (delete, then enter insert)
+> -> indent
+< -> outdent
+y -> yank (copy)
+v -> visually select (enter visual mode)
+
+# Special Verbs (always act on a single character)
+x -> delete char under the cursor
+r -> replace char under the cursor with another char
+s -> delete character under the cursor and start insert mode
+x -> delete current char
+X -> delete char before the current one
+J -> merge this line with the one below, add <space> as seperator
+~ -> change case of the current char
+
+
+
+# Nouns (Motions)
+-> see movements
+-> see search
+
+# Nouns (Text Objects)
+is -> inside sentence (=without trailing whitespace)
+iw -> inside a word (= the whole word)
+ip -> inside paragraph
+it -> inside tag
+i" -> inside quotes
+i( -> inside round braces (other brace is fine as well)
+i{ -> inside curly braces (other brace is fine as well)
+i[ -> inside brackets (other bracket is fine as well)
+as -> a sentence
+aw -> a word including the white space around it
+ap -> a paragraph including the trailing empty line
+
+
+
+# Pasting
+p -> paste right after cursor
+P -> paste right before cursor
+"+p   -> paste from system clipboard
+"<x>p -> paste into clipboard x (any num/char except +/*)
+# you can obvs add stuff to clipboard by using "<x> before the sentence

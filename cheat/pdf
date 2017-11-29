@@ -1,0 +1,65 @@
+# get "unified" page sizes
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sPAPERSIZE=a4 -dFIXEDMEDIA -sOutputFile=out.pdf in.pdf
+
+
+# shrink files
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dDetectDuplicateImages=true -dPDFSETTINGS=/prepress -sOutputFile=out.pdf in.pdf
+#optional: use -dPDFSETTINGS=/printer if it's a document
+
+# rotate pages
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dAutoRotatePages=/All -sOutputFile=out.pdf in.pdf
+
+# merge pdf files
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=merged.pdf file1.pdf file2.pdf ...
+
+
+# extract pdf files
+-sOutputFile=out-%d.pdf # creates out-1.pdf, out-2.pdf etc with one page each
+
+The numberformat can be done like in C. e.g. %03d prints 001, 002, ..., 010, ..., 100
+
+
+
+# Flag explanations
+-o
+# replaces -dBATCH -dNOPAUSE and just turns off asking after every document and leaving the gs command line on after the process is done
+
+-sDEVICE=pdfwrite
+# writes the input file to pdf
+
+-sPAPERSIZE=a4
+# so that the output pdf has a4 paper size (not necessarily true for the individual pages)
+
+-dFIXEDMEDIA
+# to force every document to use the specified papersize
+
+-dPDFFitPage
+# make every input file the specified papersize in output
+
+ -sOutputFile=out.pdf
+# what the output file is supposed to be called
+
+inputFile.pdf
+# all the input files in the right order
+
+# PDF optimization level
+-dPDFSETTINGS=/screen   (screen-view-only quality, 72 dpi images)
+-dPDFSETTINGS=/ebook    (low quality, 150 dpi images)
+-dPDFSETTINGS=/printer  (high quality, 300 dpi images)
+-dPDFSETTINGS=/prepress (high quality, color preserving, 300 dpi imgs)
+-dPDFSETTINGS=/default  (almost identical to /screen)
+
+# change page orientation
+-dAutoRotatePages=/PageByPage
+-dAutoRotatePages=/All
+
+
+# join pdf together without anything fancy
+pdfunite [file1] [file2] [...] [outputfile]
+
+# seperate pdf
+pdfseperate in.pdf out-%d.pdf # extracts pages in in.pdf to out-1.pdf out-2.pdf ...
+
+# extract only a few pages
+pdfseperate -f 3 -l 5 in.pdf out-%d.pdf # only extracts pages 3 to 5
+

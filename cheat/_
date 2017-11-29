@@ -1,0 +1,15 @@
+# COLLECTIONS
+0clitools    #ranger, tmux, vim, etc
+0commandline #rm, 
+0dev         #languages and tools
+0gui         #firefox, google etc.
+0media       #mpv, sxiv, spotify, ffmpeg, pdf
+
+
+# SINGLE CHEAT FILES
+regex    #how to construct regular expressions
+trashcli #deletes file to the trash folder
+
+
+# TROUBLESHOOTING
+

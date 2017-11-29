@@ -1,0 +1,22 @@
+<ctrl>-l -> clear the terminal
+<ctrl>-d -> close the terminal
+
+# Movements
+<ctrl>-a -> move to the beginning of the current line
+<ctrl>-e -> move to the end of the current line
+<alt>-b  -> move back a word
+<alt>-f  -> move forward a word
+<ctrl>-k -> delete from including cursor to end of line
+<ctrl>-u -> delete from just before browser to beginning of line
+<alt>-d  -> delete the (rest of the) word in front of the cursor (including cursor)
+<ctrl>-w -> delete the (rest of the) word just behind the browser
+
+# get command from history:
+1. press <ctrl>-r
+2. type command, automatically shows most recent match
+(3. if desired command doesn't show up right away, <ctrl>-r to go through all bash histor entries)
+
+# move through the history (instead of arrow keys)
+Up/Older:   <ctrl>-p
+Down/Newer: <ctrl>-n
+

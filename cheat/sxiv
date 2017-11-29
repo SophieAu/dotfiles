@@ -1,0 +1,42 @@
+# Keyboard shortcuts
+q       -> quit sxiv
+<enter> -> switch between thumbnail mode and selected image
+f       -> toggle fullscreen mode
+b       -> toggle infobar
+
+<ctrl>-<space> -> play multi-frame image (=gif)
+
+n -> go to next image
+p -> go to previous image
+g -> go to the first image
+G -> go to the last image
+r -> reload image
+
+h  -> Scroll image 1/5 of window width left.
+1h -> Scroll image 1 pixel left.
+j  -> Scroll image 1/5 of window height down.
+1j -> Scroll image 1 pixel down.
+k  -> Scroll image 1/5 of window height up.
+1k -> Scroll image 1 pixel up.
+l  -> Scroll image 1/5 of window width right.
+1l -> Scroll image 1 right.
+H  -> Scroll to left image edge.
+J  -> Scroll to bottom image edge.
+K  -> Scroll to top image edge.
+L  -> Scroll to right image edge.
+
++ -> zoom in
+- -> zoom out
+= -> Set zoom level to 100%
+w -> Set zoom level to 100%, but fit large images into window.
+W -> Fit image to window.
+e -> Fit image to window width.
+E -> Fit image to window height.
+
+< -> Rotate image counter-clockwise by 90 degrees.
+> -> Rotate image clockwise by 90 degrees.
+? -> Rotate image by 180 degrees.
+
+| -> Flip image horizontally.
+_ -> Flip image vertically.
+

@@ -1,0 +1,70 @@
+# Movement
+# unless specified otherwise, you can always prefix the command with a number
+h -> one character left
+j -> one line down
+k -> one line up
+l -> one character right
+
+w -> jump to the start of the next word (sees punctuation as a word)
+W -> jump to the start of the next word (doesn't see punctuation as a word)
+b -> jump to the start of the previous (or current) word (sees punctuation as a word)
+B -> jump to the start of the previous (or current) word (doesn't see punctuation as a word)
+e -> jump to the end of the next (or current) word (sees punctuation as a word)
+E -> jump to the end of the next (or current) word (doesn't see punctuation as a word)
+
+0 -> go to the front of the current line
+$ -> go to the end of the current line
+
+} -> go to the next empty line
+{ -> go to the previous empty line
+( -> move to start of the next sentence
+) -> move to start of the current (or previous) sentence
+
++ -> go to first char of next line
+- -> go to first char of previous line
+^ -> go to first char of current line (you need to press two time)
+
+
+f<char> -> go to next occurrence of <char>
+F<char> -> go to previous occurrence of <char>
+t<char> -> go to just before next occurrence of <char>
+T<char> -> go to just before previous occurrence of <char> 
+; -> repeat search in the same direction
+, -> repeat search in the other direction
+
+* -> go to next instance of the word under the cursor
+# -> go to previous instance of the word under the cursor
+
+/<pattern> -> highlight all occurences of <pattern> and go to first match
+?<pattern> -> highlight all occurences of <pattern> and go to first match (searches backwards)
+n -> go to next match
+N -> go to previous match
+/ -> repeat last search forwards
+? -> repeat last search backwards
+
+
+
+H      -> go to top of the page
+M      -> go to middle of the page
+L      -> go to bottom of the page
+G      -> go to last line in the document
+<num>H -> go to line <num> counting from the top of the page
+<num>L -> go to line <num> counting from the bottom of the page
+<num>G -> go to line <num>
+:<num> -> go to line <num>
+''     -> go to start of the line that was last edited
+``     -> go to last edited char (you need to press 4 times)
+
+
+# Scrolling
+Ctrl-e -> scroll down one line
+Ctrl-y -> scroll up one line
+Ctrl-d -> scroll down half a page
+Ctrl-u -> scroll up half a page
+Ctrl-f -> scroll down one page
+Ctrl-b -> scroll up one page
+
+z<enter> -> scroll current line to top of the screen
+z.       -> scroll current line to middle of the screen
+z-       -> scroll current line to bottom of the screen
+

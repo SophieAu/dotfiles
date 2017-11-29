@@ -1,0 +1,26 @@
+# Keyboard Shortcuts
+<ctrl>-m        -> Launch selected entry
+<shift>-<enter> -> Launch the application in a terminal (in run mode)
+
+<ctrl>-n -> Select next entry
+<ctrl>-p -> Select previous entry
+<pgup> -> Go to the previous page
+<pgdown> -> Go to the next page
+
+<ctrl>-<tab> -> Switch to the next modi. The list can be customized with the -modi option.
+
+<ctrl>-v       -> Paste from clipboard
+<ctrl>-a       -> Move to beginning of line
+<ctrl>-e       -> Move to end of line
+<ctrl>-f       -> Move forward one character
+<alt>-f        -> Move forward one word
+<ctrl>-b       -> Move back one character
+<alt>-b        -> Move back one word
+
+<ctrl>-w       -> Clear the line
+<ctrl>-u       -> Delete till the start of line
+<ctrl>-d       -> Delete character
+<ctrl>-<alt>-d -> Delete word
+<ctrl>-h       -> Backspace (delete previous character)
+<ctrl>-<alt>-h -> Delete previous word
+

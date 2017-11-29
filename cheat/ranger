@@ -1,0 +1,36 @@
+q -> quit
+S -> quit and cd into current dir
+
+<space> -> select/deselect a file
+v -> toggle selection of all the unselected files in the current directory
+V -> enter visual mode to select multiple "connected" files
+
+gg -> jump to the top of the file list
+G  -> jump to the bottom of the file list
+zh -> toggle hidden files
+
+
+# File Actions
+l -> open file with default application
+r -> open file with one of the presented options
+i -> display current file with $less
+
+dd     -> mark selected files for cut-paste
+pp     -> paste files from buffer
+yy     -> copy selected files
+dD     -> delete selected files permanently
+<entf> -> move selected files to trash
+cw / a -> rename current file
+
+s -> open shell
+
+# Flags for :shell and :open_with
+-t -> open command in a new terminal
+-c run command for current file only, not all selected
+
+# Makros
+%s -> selected files in the current dir
+%f -> highlighted (current) file
+%d -> path of current directory
+%c -> full path to all files currently in the paste buffer
+%p -> full path to selected files

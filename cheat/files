@@ -1,0 +1,39 @@
+# To look at a file
+
+# prints content of all files passed as argument to console
+cat [FILE(s)]
+
+# like cat but allows paging through file content, kinda like a vim preview (with the same key bindings
+less [FILE]
+
+# prints the first/last ten lines of all files passed to console
+# optional -n X parameter changes "ten lines" to "X lines"
+head [FILE(s)]
+tail [FILE(s)]
+
+# write standard input to file and print to output at the same time
+<std in> | tee <targetfile>
+# to append if file exists already:
+<std in> | tee -a <targetfile>
+
+# to get word/line/char/byte/... count of a file/standard in, e.g.
+wc -l # line count, for other options, check the manpage
+
+# to see the difference between two files:
+diff [FILE] [FILE]
+
+
+# write to files
+
+# creates a new file with the output of the command, OVERWRITES contents of existing files
+<command> > [FILE]
+
+# append output of the command to the file
+<command> >> [FILE]
+
+
+# other
+
+# convert a dos text file to unix
+dos2unix [FILE]
+

@@ -1,0 +1,71 @@
+# Navigation
+<ctrl>-[    -> back
+<ctrl>-]    -> forward
+<ctrl>-o    -> open file
+<F5>        -> reload
+<ctrl>-<F5> -> reload and override cache
+<esc>       -> stop
+
+
+# Current Page
+<space>         -> go down a screen
+<shift>-<space> -> go up a space
+<end>           -> go to the bottom of the page
+<home>          -> go to the top of the page
+<ctrl>-+ / --   -> zoom in/out
+<ctrl>-0        -> reset zoom to 100%
+
+
+# Search
+/                -> quick find
+<ctrl>-f         -> find
+<ctrl>-g         -> find again (=next)
+<ctrl>-<shift>-g -> find previous
+<esc>            -> close (quick) find bar
+
+
+# Windows and Tabs
+<ctrl>-w                  -> close tab
+<ctrl>-<shift>-w          -> close window
+<ctrl>-<shift>-<pagegup>  -> move current tab left
+<ctrl>-<shift>-<pagedown> -> move current tab right
+<ctrl>-<home>             -> move current tab to the start
+<ctrl>-<end>              -> move current tab to the end
+<ctrl>-t                  -> new tab
+<ctrl>-n                  -> new window
+<ctrl>-<shift>-p          -> new private window
+<ctrl>-<tab>              -> go to next tab
+<ctrl>-<shift>-<tab>      -> go to previous tab
+<alt>-<enter>             -> open address in location bar n new tab
+<ctrl>-<shift>-t          -> undo closing tab
+<ctrl>-<shift>-n          -> undo closing window
+<alt>-1                   -> go to tab 1 (also works with 2-8)
+<alt>-9                   -> go to last tab
+
+
+# Bookmarks and Stuff
+<ctrl>-d         -> bookmark current page
+<ctrl>-b         -> toggle bookmarks sidebar
+<ctrl>-<shift>-o -> open bookmark window
+<ctrl>-<shift>-y -> show downloads tab
+<ctrl>-<shift>-a -> show addons tab
+
+# Developer Tools
+<ctrl>-<shift>-i -> toggle developer tools
+<shift>-<F2>     -> toggle developer toolbar
+<ctrl>-<shift>-m -> toggle reponsive design view
+<shift>-<F4>     -> show scratch pad
+<ctrl>-u         -> show page source tab
+<ctrl>-i         -> show page info
+
+
+# Miscellaneous
+<del>          -> delete selected autocomplete entry
+<F11>          -> toggle full screen mode
+<alt>          -> toggle menu bar
+<ctrl>-<alt>-r -> toggle reader mode
+<ctrl>-l       -> select location bar, version 1
+<alt>-d        -> select location bar, version 2
+<ctrl>-j       -> select location bar, version 3
+<ctrl>-m       -> mute/unmute audio
+

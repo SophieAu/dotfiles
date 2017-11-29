@@ -1,0 +1,8 @@
+# to create a hard link: (the target can be a file too)
+ln <sourcefile> /path/to/target/directory/
+
+# find all hardlinks to a file
+find <base path> -samefile /path/to/file
+
+# create a softlink
+ln <absolute/path/to/source/file/or/dir> /path/to/link

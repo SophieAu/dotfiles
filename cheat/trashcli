@@ -1,0 +1,14 @@
+# move specified file/dir into trash
+trash-put [file/dir]
+
+# show trash contents sorted by deletion date
+trash-list
+
+# restores the specified file/dir. A prompt appears to choose files to be restored
+trash-restore
+
+# permanently deletes all files older than the specified number. If no number is specified, all contents will be deleted
+trash-empty [file age in days]
+
+# permanently deletes all files matching the pattern
+trash-rm [pattern]

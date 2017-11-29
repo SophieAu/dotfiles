@@ -1,0 +1,19 @@
+# get information on the current window
+xprop
+
+
+# show all input devices and their options
+xinput
+
+# show properties for a device
+xinput list-prop <device name or id>
+
+# set devices prop
+xinput set-prop <device> <prop> <value>
+
+
+# get keycodes from keyboard and mouse
+xev
+
+# get keycodes only from keyboard/mouse
+sev -event <keyboard/mouse>

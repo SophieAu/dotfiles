@@ -1,0 +1,22 @@
+# search globally for file matching regex pattern
+# locate is faster (and better) because it does not search the whole system but a database that contains all file paths and can look into root folders
+locate <pattern>
+
+
+# look for anything that matches the regex pattern
+find <base path> -name '<pattern>'
+
+# find all hardlinks to a file
+find <base path> -samefile /path/to/file
+
+# look for a file/directory that matches the regex pattern
+find <base path> -type f/d -name '<pattern>'
+
+# look for files not matching a path (e.g. checking that the files absolute path doesn't contain pattern)
+find <basedir> -not -path '<pattern>'
+
+# look for files not matching multiple paths
+find <base path> -not \( -path '<pattern>' -o - path '<pattern>' \) 
+
+# generally speaking, you can interchange -path and -name without a problem
+

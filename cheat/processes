@@ -1,0 +1,13 @@
+# start a service like docker or mysql
+sudo service <service> start
+
+# check status of a service
+sudo service <service> status
+
+
+# kill a process
+kill <PID>
+
+# kill all processes with the specified name
+pkill <process name>
+

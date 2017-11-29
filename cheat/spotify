@@ -1,0 +1,16 @@
+# track control
+<space>         -> play/pause
+<ctrl>-<left>   -> restart song/go to previous song
+<ctrl>-<right>  -> go to next song
+<shift>-<left>  -> go back 5 sec
+<shift>-<right> -> go forward 5 sec
+
+# volume control
+<ctrl>-<up>         -> increase volume
+<ctrl>-<down>       -> decrease volume
+<ctrl>-<shift>-<up> -> max volume
+
+
+<ctrl>-n -> new playlist
+<ctrl>-l -> focus on search field
+

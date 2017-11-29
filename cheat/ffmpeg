@@ -1,0 +1,14 @@
+# Rotate a video
+ffmpeg -i <INPUT FILE> -vf "<transpose command>" <OUTPUT FILE>
+
+# transpose commands can be:
+hflip -> flip horizontally (top <-> bottom)
+vflip -> flip vertically (left <-> right)
+transpose=x with x=0 -> 90°counter + vertical flip 
+                   1 -> 90°clock
+                   2 -> 90°counter
+                   3 -> 90°clock + vertical flip
+
+# NOTE: if you only want to watch the video, do:
+mpv --video-rotate=<0-359>
+

@@ -1,0 +1,14 @@
+c         -> compose a new message
+<shift>-r -> reply to the selected conversation
+<shift>-a -> reply to all recipients
+<shift>-f -> forward a conversation
+<up>      -> display the previous message/conversation
+<down>    -> display the next message/conversation
+r         -> mark the message/conversation as read
+u         -> mark the message/conversation as unread
+*         -> mark the message/conversation as starred
+t         -> move the message/conversation to trash
+a         -> move the message/conversation to archive
+s         -> move the message/conversation to spam
+
+
