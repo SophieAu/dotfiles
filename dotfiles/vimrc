@@ -26,3 +26,6 @@ inoremap <Left> <NOP>
  noremap <Right> <NOP>
 inoremap <Right> <NOP>
 
+" disable delete key in normalmode
+noremap <del> <NOP>
+
