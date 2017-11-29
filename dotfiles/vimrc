@@ -2,6 +2,7 @@
 :set ruler "show the ruler, should be default already
 :set tabstop=4 " set indent width to 4 chars
 :set hidden "hide buffers instad of closing them
+:set incsearch "show possible matches while searching
 
 
 "F5 prints the current date and time
