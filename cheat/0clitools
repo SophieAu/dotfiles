@@ -9,6 +9,7 @@ termite
 
 # terminal multiplexer
 tmux
+tmuxp
 
 # text editor
 vim
@@ -16,6 +17,7 @@ vim_editing
 vim_exmode
 vim_modes
 vim_movement
+vim_surround
 
 # various commands to control X.org
 xhelpers

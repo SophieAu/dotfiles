@@ -1,0 +1,16 @@
+# replace surrounds with other surrounds
+cs"'   -> "hello" => 'hello'
+cs'<q> -> 'hello' => <q>hello</q>
+cst"   -> <q>hello</q> => "hello"
+
+# remove surrounds
+ds" -> "hello" => hello
+
+# add surrounds
+ysiw] -> [hello]
+ysiw[ -> [ hello ]
+
+# Press a capital V (for linewise visual mode) followed by S<p class="important">.
+<p class="important">
+  hello
+</p>
