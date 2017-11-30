@@ -1,6 +1,9 @@
+# compile pandoc to pdf
+pandoc -V papersize:a4paper -o out.pdf in1.pdf in2.pdf
+
+
 # get "unified" page sizes
 gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sPAPERSIZE=a4 -dFIXEDMEDIA -sOutputFile=out.pdf in.pdf
-
 
 # shrink files
 gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dDetectDuplicateImages=true -dPDFSETTINGS=/prepress -sOutputFile=out.pdf in.pdf
@@ -9,14 +12,23 @@ gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dDetectDuplicateImages=true -dPDFSETT
 # rotate pages
 gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -dAutoRotatePages=/All -sOutputFile=out.pdf in.pdf
 
+
 # merge pdf files
 gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=merged.pdf file1.pdf file2.pdf ...
 
+# join pdf together without anything fancy
+pdfunite [file1] [file2] [...] [outputfile]
+
 
 # extract pdf files
--sOutputFile=out-%d.pdf # creates out-1.pdf, out-2.pdf etc with one page each
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=out-%d.pdf file.pdf # creates out-1.pdf, out-2.pdf etc with one page each
+# The numberformat can be done like in C. e.g. %03d prints 001, 002, ..., 010, ..., 100
 
-The numberformat can be done like in C. e.g. %03d prints 001, 002, ..., 010, ..., 100
+# seperate pdf
+pdfseperate in.pdf out-%d.pdf # extracts pages in in.pdf to out-1.pdf out-2.pdf ...
+
+# extract only a few pages
+pdfseperate -f 3 -l 5 in.pdf out-%d.pdf # only extracts pages 3 to 5
 
 
 
@@ -52,14 +64,4 @@ inputFile.pdf
 # change page orientation
 -dAutoRotatePages=/PageByPage
 -dAutoRotatePages=/All
-
-
-# join pdf together without anything fancy
-pdfunite [file1] [file2] [...] [outputfile]
-
-# seperate pdf
-pdfseperate in.pdf out-%d.pdf # extracts pages in in.pdf to out-1.pdf out-2.pdf ...
-
-# extract only a few pages
-pdfseperate -f 3 -l 5 in.pdf out-%d.pdf # only extracts pages 3 to 5
 
