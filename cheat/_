@@ -1,6 +1,6 @@
 # COLLECTIONS
 0clitools    #ranger, tmux, vim, etc
-0commandline #rm, 
+0commandline #cron, process, files, ...
 0dev         #languages and tools
 0gui         #firefox, google etc.
 0media       #mpv, sxiv, spotify, ffmpeg, pdf
