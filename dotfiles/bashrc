@@ -24,6 +24,7 @@ export VISUAL="$EDITOR"
 # don't save duplicates in bash history, delete duplicates except newest
 export HISTCONTROL=ignoreboth:erasedups
 
+export CHEATCOLORS=true
 
 
 eval "$(thefuck --alias)"
