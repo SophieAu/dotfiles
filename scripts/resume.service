@@ -1,0 +1,13 @@
+[Unit]
+Description=Check for current wallpaper
+After=suspend.target
+
+[Service]
+User=%I
+Type=simple
+Environment=DISPLAY=:0
+ExecStart=/home/solvi/bin/wallswitch
+
+[Install]
+WantedBy=multi-user.target suspend.target
+
