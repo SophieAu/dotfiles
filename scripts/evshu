@@ -27,7 +27,7 @@ echo
 while true; do
  read -p "Do you want to suspend or shutdown the system? [sus/shu] " ans
  case $ans in
-  sus) echo "suspending..."; aumount; exit & exec sysus;;
+  sus) echo "suspending..."; aumount; systemctl suspend; exit;;
   shu) echo "shutting down..."; shutdown now;;
  esac
 done
