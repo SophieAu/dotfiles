@@ -9,7 +9,7 @@ crontab -e
 
 
 # save "new" crontab to file
-crontabFile="/home/solvi/dev/0.dotfiles/crontab"
+crontabFile="/home/solvi/dot/crontab"
 currentDateTime=$(date --rfc-3339=seconds)
 echo -e "\n# ${currentDateTime}\n$(crontab -l)\n" >> "$crontabFile"
 
