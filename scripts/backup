@@ -24,16 +24,14 @@ newBackup=$BACKUPDRIVE/0\.Backup_$(date +%Y-%m-%d)
 function backingUp () {
   folder=${1##*/}
   if [[ "$folder" = "Archive" ]] ; then
-	echo "Arch"
 	rsync -azu --progress "$1/" "$BACKUPDRIVE/0.Backup_Archive"
+  elif [[ $folder = "Music"  ]] ; then 
+	rsync -azu --progress "$1/" "$BACKUPDRIVE/0.Backup_Music"
   elif [[ $folder = "Pictures" ]] ; then
-	echo "Pic"	
 	rsync -azu --progress "$1/" "$BACKUPDRIVE/0.Backup_Pictures"
   elif [[ $folder = "Reference" ]] ; then
-	echo "ref"
 	rsync -azu --progress "$1/" "$BACKUPDRIVE/0.Backup_Reference"
   else
-	echo "$folder"
 	rsync -azuL --progress "$1" "$newBackup"
   fi
   return 0
