@@ -11,7 +11,7 @@ tOD=${tOD#0}
 # determine current actual phase of the day
 if [[ $tOD -lt 600 || $tOD -ge 1900 ]] ; then
 	phase="night"
-elif [[ $tOD -ge 730 && $tOD -lt 1700 ]] ; then
+elif [[ $tOD -ge 900 && $tOD -lt 1700 ]] ; then
 	phase="day"
 else
 	phase="twilight"
