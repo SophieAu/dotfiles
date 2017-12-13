@@ -46,3 +46,6 @@ export NEWVARIABLE=<value>
 # To show cumulative humanreadable size
 du -sh
 
+# enable a systemctl service
+systemctl --user enable /path/to/file.service
+
