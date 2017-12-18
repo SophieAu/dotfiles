@@ -1,5 +1,5 @@
 # compile pandoc to pdf
-pandoc -V papersize:a4paper -o out.pdf in1.pdf in2.pdf
+pandoc -V papersize:a4paper -o out.pdf in1.file in2.file
 
 
 # get "unified" page sizes

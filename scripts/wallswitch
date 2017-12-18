@@ -13,7 +13,7 @@ if [[ $tOD -lt 600 || $tOD -ge 1900 ]] ; then
 	phase="night"
 elif [[ $tOD -ge 900 && $tOD -lt 1700 ]] ; then
 	phase="day"
-elif [[ $toD -lt 1200 ]] ; then
+elif [[ $tOD -lt 1200 ]] ; then
 	phase="morning"
 else
 	phase="evening"
