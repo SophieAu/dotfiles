@@ -8,6 +8,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'ap/vim-css-color'
 Plugin 'bling/vim-bufferline'
+Plugin 'Yggdroot/indentLine'
 call vundle#end()
 filetype plugin indent on
 
@@ -50,3 +51,9 @@ inoremap <Right> <NOP>
 " disable delete key in normalmode
 noremap <del> <NOP>
 
+
+" set indent line config
+set list lcs=tab:\|\ ,trail:· " show lines for tab indentation level
+let g:indentLine_char = '|'
+let g:indentLine_color_term = 8
+highlight SpecialKey ctermfg=8
