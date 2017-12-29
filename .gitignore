@@ -1,4 +1,9 @@
+# (old) wallpapers
 wall-*.jpg
 
+# soft links to scripts
+scripts/snipster
 
+# snipster list
 snippets/__snipster__\.csv
+
