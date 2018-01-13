@@ -23,6 +23,7 @@ jekyll
 
 # database
 mysql
+sqlite
 
 # node.js package manager
 npm

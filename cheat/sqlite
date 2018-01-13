@@ -1,0 +1,12 @@
+# to start
+sqlite
+
+# open a database file
+.open [FILE]
+
+# see all tables of the database
+.tables
+
+# see the schema of a table
+.schema [TABLE]
+
