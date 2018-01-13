@@ -49,3 +49,5 @@ du -sh
 # enable a systemctl service
 systemctl --user enable /path/to/file.service
 
+# see all network traffic coming in and going out
+sudo nethogs
