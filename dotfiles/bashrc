@@ -14,7 +14,7 @@ fi
 export PATH="$PATH:$HOME/.rvm/bin"
 
 # Change the prompt
-PS1="\e[1;15m\w \e[1;91m>>  \e[0m"
+PS1="\[\033[01;15m\]\w \[\033[1;91m\]>>  \[\033[0m\]"
 
 
 # Set vim-mode of gvim  as standard editor
