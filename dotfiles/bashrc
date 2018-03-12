@@ -13,9 +13,13 @@ fi
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-# Change the prompt
-PS1="\[\033[01;15m\]\w \[\033[1;91m\]>>  \[\033[0m\]"
+# Add git branch to prompt
+parse_git_branch() {
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
 
+# Change the prompt
+PS1="\[\033[01;15m\]\w\[\033[01;34m\]\$(parse_git_branch) \[\033[1;91m\]>>  \[\033[0m\]"
 
 # Set vim-mode of gvim  as standard editor
 export EDITOR="gvim -v"
